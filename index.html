@@ -11,6 +11,13 @@
     <meta property="og:locale" content="ru_RU">
     <meta property="og:url" content="https://dudkin.co/">
     <meta property="og:image" content="https://dudkin.co/img/roses-art-nouveau.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Витражное дело Дудкинъ">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Витражи на заказ в Москве и МО — мастерская Дудкинъ">
+    <meta name="twitter:description" content="Авторские витражи ручной работы. Техника Тиффани, мозаичные панно, витражные зеркала. От эскиза до установки.">
+    <meta name="twitter:image" content="https://dudkin.co/img/roses-art-nouveau.jpg">
     <link rel="canonical" href="https://dudkin.co/">
     <title>Витражи на заказ в Москве и МО — авторская мастерская Дудкинъ</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -1095,6 +1102,54 @@
             margin-top: 0.2rem;
         }
 
+        /* FAQ */
+        .faq__list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq__item {
+            border-bottom: 1px solid var(--border);
+            padding: 1.2rem 0;
+        }
+
+        .faq__item summary {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq__item summary::-webkit-details-marker { display: none; }
+
+        .faq__item summary::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: var(--gold-dim);
+            transition: transform 0.3s ease;
+        }
+
+        .faq__item[open] summary::after {
+            content: '−';
+        }
+
+        .faq__item p {
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .faq__item a {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid var(--gold-dim);
+        }
+
         /* ============================================
            CONTACT
            ============================================ */
@@ -1778,6 +1833,32 @@
     "jobTitle": "Художник-витражист"
   },
   "sameAs": [],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "3",
+    "bestRating": "5"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Марина К."},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "reviewBody": "Заказывали витражное окно в загородный дом. Александр создал эскиз, который превзошёл все ожидания. Когда солнце проходит через стекло — это магия."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Андрей и Елена В."},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "reviewBody": "Витражное зеркало стало главным украшением нашей гостиной. Мастерская Дудкина — это сочетание художественного вкуса и безупречного качества исполнения."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Игорь С."},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "reviewBody": "Обратился за реставрацией старого витража в особняке начала XX века. Работа выполнена с невероятным уважением к оригиналу. Александр — настоящий мастер своего дела."
+    }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Услуги",
@@ -1789,6 +1870,54 @@
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Мастер-классы"}}
     ]
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Сколько стоит витраж на заказ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Стоимость витража зависит от размера, сложности рисунка и техники исполнения. Витражи Тиффани — от 55 000 руб/м². Мозаичные панно — от 40 000 руб/м². Точную цену рассчитываем после обсуждения эскиза. Консультация бесплатная."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какие техники витражей вы используете?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Основная техника — Тиффани (спайка медной фольгой). Также работаем с классическим свинцовым витражом, фьюзингом и мозаикой из натурального камня и стекла."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько времени занимает изготовление витража?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Сроки зависят от сложности: небольшое панно — 2-3 недели, витражное окно среднего размера — 3-5 недель, сложный проект с нестандартными элементами — до 8 недель. Эскиз согласовываем за 3-5 дней."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Вы устанавливаете витражи или только изготавливаете?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Полный цикл: от эскиза до монтажа. Устанавливаем витражи в окна, двери, перегородки, потолочные конструкции. Работаем по Москве и Московской области. Доставка и установка входят в стоимость проекта."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно ли заказать витраж по своему рисунку?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, работаем по эскизам заказчика, фотографиям, референсам. Также разрабатываем дизайн с нуля под ваш интерьер. Перед изготовлением согласовываем цветовую палитру стекла на образцах."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -1803,6 +1932,7 @@
             <li><a href="#about">О мастерѣ</a></li>
             <li><a href="#services">Услуги</a></li>
             <li><a href="#how-to-order">Заказать</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#testimonials">Отзывы</a></li>
             <li><a href="#contact">Связаться</a></li>
         </ul>
@@ -1820,10 +1950,12 @@
         <a href="#about">О мастерѣ</a>
         <a href="#services">Услуги</a>
         <a href="#how-to-order">Заказать</a>
+        <a href="#faq">FAQ</a>
         <a href="#testimonials">Отзывы</a>
         <a href="#contact">Связаться</a>
     </div>
 
+    <main>
     <!-- ====== HERO ====== -->
     <section class="hero" id="hero">
         <!-- Fullscreen slideshow background -->
@@ -2222,6 +2354,43 @@
         </div>
     </section>
 
+    <!-- ====== FAQ ====== -->
+    <section class="faq" id="faq">
+        <div class="testimonials__inner">
+            <div class="section-ornament fade-in">
+                <div class="ornament-divider">
+                    <div class="ornament-divider__line"></div>
+                    <div class="ornament-divider__diamond"></div>
+                    <div class="ornament-divider__line"></div>
+                </div>
+            </div>
+            <h2 class="section__title fade-in">Частые вопросы</h2>
+
+            <div class="faq__list">
+                <details class="faq__item fade-in">
+                    <summary>Сколько стоит витраж на заказ?</summary>
+                    <p>Цена зависит от размера, сложности рисунка и техники. Витражи Тиффани — от 55 000 руб/м². Мозаичные панно — от 40 000 руб/м². Точную стоимость считаем после обсуждения эскиза. Консультация бесплатная — <a href="#contact">напишите или позвоните</a>.</p>
+                </details>
+                <details class="faq__item fade-in">
+                    <summary>Какие техники витражей вы используете?</summary>
+                    <p>В основном — Тиффани: каждый кусочек стекла оборачивается медной фольгой и спаивается. Ещё делаем классические свинцовые витражи, фьюзинг и мозаику из натурального камня.</p>
+                </details>
+                <details class="faq__item fade-in">
+                    <summary>Сколько времени занимает изготовление?</summary>
+                    <p>Небольшое панно — 2-3 недели. Витражное окно среднего размера — 3-5 недель. Сложный проект — до 8 недель. Эскиз обычно согласовываем за 3-5 дней.</p>
+                </details>
+                <details class="faq__item fade-in">
+                    <summary>Вы устанавливаете витражи или только делаете?</summary>
+                    <p>Полный цикл — от эскиза до монтажа. Ставим витражи в окна, двери, перегородки, потолки. Работаем по Москве и Московской области. Доставка и установка входят в стоимость.</p>
+                </details>
+                <details class="faq__item fade-in">
+                    <summary>Можно заказать витраж по своему рисунку?</summary>
+                    <p>Да. Работаем по вашим эскизам, фотографиям, референсам из интернета. Или разрабатываем дизайн с нуля — под ваш интерьер. Перед работой подбираем стёкла на образцах, чтобы вы увидели цвета вживую.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <!-- ====== TESTIMONIALS ====== -->
     <section class="testimonials" id="testimonials">
         <div class="testimonials__inner">
@@ -2327,26 +2496,17 @@
         </div>
     </section>
 
+    </main>
     <!-- ====== FOOTER ====== -->
     <footer class="footer">
         <div class="footer__inner">
             <div class="bull-skull">
-                <img src="img/skull-gold.png" alt="Витражное дѣло Дудкинъ" width="48" height="auto" style="opacity: 0.7;">
+                <img src="img/skull-gold.png" alt="Витражное дѣло Дудкинъ" width="48" style="opacity: 0.7;">
             </div>
 
             <div class="footer__brand">Витражное дѣло Дудкинъ</div>
 
-            <div class="footer__socials">
-                <a href="#" class="footer__social" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
-                </a>
-                <a href="#" class="footer__social" aria-label="VK">
-                    <svg viewBox="0 0 24 24"><path d="M2 12.5C2 8 2 5.75 3.38 4.38 4.75 3 7 3 11.5 3h1c4.5 0 6.75 0 8.13 1.38C22 5.75 22 8 22 12.5v-1c0 4.5 0 6.75-1.37 8.12C19.25 21 17 21 12.5 21h-1c-4.5 0-6.75 0-8.12-1.38C2 18.25 2 16 2 11.5zm3.47.38h1.6c.08 1.6.75 2.28 1.32 2.42V12.88h1.5v1.52c.56-.06 1.14-.7 1.34-1.52h1.5a3.2 3.2 0 0 1-1.24 1.82A3.3 3.3 0 0 0 12 16.5h.3c2.35 0 3.68-1.63 3.68-4.1h1.5c0 1.66-.36 2.94-1.07 3.82.71.88 1.57 1.28 2.59 1.28v1.5c-1.4 0-2.53-.63-3.36-1.7-1 1.12-2.4 1.7-4.14 1.7-3 0-5.03-2.3-5.53-5.12z"/></svg>
-                </a>
-                <a href="#" class="footer__social" aria-label="YouTube">
-                    <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#0A0A0F"/></svg>
-                </a>
-            </div>
+            <!-- Social links will be added when profiles are created -->
 
             <div class="footer__copy">
                 &copy; 2018&mdash;2026 Витражное дѣло Дудкинъ &bull; Всѣ права защищены
