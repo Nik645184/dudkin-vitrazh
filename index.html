@@ -383,30 +383,17 @@
             margin-bottom: 2rem;
         }
 
-        .hero__skull svg {
+        .hero__skull img {
             width: 80px;
-            height: 70px;
-            opacity: 0.75;
+            height: auto;
+            opacity: 0.85;
             filter: drop-shadow(0 0 15px rgba(201, 168, 76, 0.15));
             transition: opacity 0.4s ease, filter 0.4s ease;
         }
 
-        .hero__skull svg .skull-fill {
-            fill: var(--gold);
-            transition: fill 0.4s ease;
-        }
-
-        .hero__skull svg .skull-hole {
-            fill: var(--bg-deep);
-        }
-
-        .hero__skull:hover svg {
+        .hero__skull:hover img {
             opacity: 1;
             filter: drop-shadow(0 0 25px rgba(201, 168, 76, 0.3));
-        }
-
-        .hero__skull:hover svg .skull-fill {
-            fill: var(--gold-light);
         }
 
         .hero__ornament-top {
@@ -1874,31 +1861,7 @@
         <div class="hero__content">
             <!-- Bull skull logo -->
             <div class="hero__skull">
-                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Left horn — long, sweeping out and slightly up -->
-                    <path class="skull-fill" d="M38 32C30 28 18 22 8 18C4 16 1 15 0 14.5C-1.5 14 -1 17 0.5 17.5C4 19 12 24 22 30C30 34 35 36 38 37Z"/>
-                    <!-- Right horn -->
-                    <path class="skull-fill" d="M82 32C90 28 102 22 112 18C116 16 119 15 120 14.5C121.5 14 121 17 119.5 17.5C116 19 108 24 98 30C90 34 85 36 82 37Z"/>
-                    <!-- Forehead — wide, slightly domed -->
-                    <path class="skull-fill" d="M38 32C40 26 46 22 60 22C74 22 80 26 82 32C80 36 76 40 72 42L48 42C44 40 40 36 38 32Z"/>
-                    <!-- Left cheekbone -->
-                    <path class="skull-fill" d="M48 42C44 44 40 48 38 54C36 60 38 66 42 70L48 62C46 58 44 52 44 48C44 46 46 44 48 42Z"/>
-                    <!-- Right cheekbone -->
-                    <path class="skull-fill" d="M72 42C76 44 80 48 82 54C84 60 82 66 78 70L72 62C74 58 76 52 76 48C76 46 74 44 72 42Z"/>
-                    <!-- Nose bridge — long, narrowing down to jaw -->
-                    <path class="skull-fill" d="M54 42L52 62L48 76C50 82 54 90 60 95C66 90 70 82 72 76L68 62L66 42Z"/>
-                    <!-- Left jaw fill -->
-                    <path class="skull-fill" d="M42 70C44 74 46 78 48 76L52 62L48 62C46 66 44 68 42 70Z"/>
-                    <!-- Right jaw fill -->
-                    <path class="skull-fill" d="M78 70C76 74 74 78 72 76L68 62L72 62C74 66 76 68 78 70Z"/>
-                    <!-- Eye sockets -->
-                    <ellipse class="skull-hole" cx="52" cy="48" rx="5" ry="6" transform="rotate(-3 52 48)"/>
-                    <ellipse class="skull-hole" cx="68" cy="48" rx="5" ry="6" transform="rotate(3 68 48)"/>
-                    <!-- Nose hole -->
-                    <path class="skull-hole" d="M56 68C56 64 58 62 60 62C62 62 64 64 64 68C64 72 62 74 60 74C58 74 56 72 56 68Z"/>
-                    <!-- Center line -->
-                    <line x1="60" y1="26" x2="60" y2="62" stroke="var(--gold)" stroke-width="0.3" opacity="0.12"/>
-                </svg>
+                <img src="img/skull-logo.png" alt="Витражное дѣло Дудкинъ" width="80">
             </div>
 
             <!-- Art Nouveau ornament -->
@@ -2364,19 +2327,7 @@
     <footer class="footer">
         <div class="footer__inner">
             <div class="bull-skull">
-                <svg width="48" height="48" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M38 32C30 28 18 22 8 18C4 16 1 15 0 14.5C-1.5 14 -1 17 0.5 17.5C4 19 12 24 22 30C30 34 35 36 38 37Z" fill="var(--gold)"/>
-                    <path d="M82 32C90 28 102 22 112 18C116 16 119 15 120 14.5C121.5 14 121 17 119.5 17.5C116 19 108 24 98 30C90 34 85 36 82 37Z" fill="var(--gold)"/>
-                    <path d="M38 32C40 26 46 22 60 22C74 22 80 26 82 32C80 36 76 40 72 42L48 42C44 40 40 36 38 32Z" fill="var(--gold)"/>
-                    <path d="M48 42C44 44 40 48 38 54C36 60 38 66 42 70L48 62C46 58 44 52 44 48C44 46 46 44 48 42Z" fill="var(--gold)"/>
-                    <path d="M72 42C76 44 80 48 82 54C84 60 82 66 78 70L72 62C74 58 76 52 76 48C76 46 74 44 72 42Z" fill="var(--gold)"/>
-                    <path d="M54 42L52 62L48 76C50 82 54 90 60 95C66 90 70 82 72 76L68 62L66 42Z" fill="var(--gold)"/>
-                    <path d="M42 70C44 74 46 78 48 76L52 62L48 62C46 66 44 68 42 70Z" fill="var(--gold)"/>
-                    <path d="M78 70C76 74 74 78 72 76L68 62L72 62C74 66 76 68 78 70Z" fill="var(--gold)"/>
-                    <ellipse cx="52" cy="48" rx="5" ry="6" fill="#0A0A0F" transform="rotate(-3 52 48)"/>
-                    <ellipse cx="68" cy="48" rx="5" ry="6" fill="#0A0A0F" transform="rotate(3 68 48)"/>
-                    <path d="M56 68C56 64 58 62 60 62C62 62 64 64 64 68C64 72 62 74 60 74C58 74 56 72 56 68Z" fill="#0A0A0F"/>
-                </svg>
+                <img src="img/skull-logo.png" alt="Витражное дѣло Дудкинъ" width="48" height="auto" style="opacity: 0.7;">
             </div>
 
             <div class="footer__brand">Витражное дѣло Дудкинъ</div>
