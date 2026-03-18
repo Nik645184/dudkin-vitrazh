@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://dudkin.co/sitemap.xml
+
+Host: dudkin.co
