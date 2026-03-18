@@ -1,0 +1,2490 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Витражное дѣло Дудкинъ — авторская мастерская витражей ручной работы в Чехове. Витражи Тиффани, мозаичные панно, витражные зеркала. Полный цикл от эскиза до установки.">
+    <meta name="keywords" content="витражи, витражи Тиффани, витражное стекло, мозаика, витражные окна, витражные зеркала, Чехов, Москва, Дудкин">
+    <meta property="og:title" content="Витражное дѣло Дудкинъ — авторские витражи ручной работы">
+    <meta property="og:description" content="Авторская мастерская полного цикла: от эскиза до установки. Витражи Тиффани, мозаичные панно, зеркала.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <title>Витражное дѣло Дудкинъ — авторские витражи ручной работы</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 100'%3E%3Cpath d='M60 95C60 95 50 82 46 74C42 66 39 58 38 52C37 46 38 40 42 36C44 34 46 33 48 33C46 30 44 26 42 22L28 42C30 44 32 46 32 50C30 48 26 48 22 50C18 52 16 56 16 60C16 66 20 72 26 74C28 75 30 74 30 72C30 68 32 64 36 62C36 66 38 72 42 78C46 84 52 90 60 95Z' fill='%23C9A84C'/%3E%3Cpath d='M60 95C60 95 70 82 74 74C78 66 81 58 82 52C83 46 82 40 78 36C76 34 74 33 72 33C74 30 76 26 78 22L92 42C90 44 88 46 88 50C90 48 94 48 98 50C102 52 104 56 104 60C104 66 100 72 94 74C92 75 90 74 90 72C90 68 88 64 84 62C84 66 82 72 78 78C74 84 68 90 60 95Z' fill='%23C9A84C'/%3E%3Cpath d='M28 42C23 34 16 22 12 16C8 10 4 6 1 4C-0.5 3-1 5.5 0.5 6.5C4 10 9 18 12 26C14.5 33 15.5 38 15.5 42L28 42Z' fill='%23C9A84C'/%3E%3Cpath d='M92 42C97 34 104 22 108 16C112 10 116 6 119 4C120.5 3 121 5.5 119.5 6.5C116 10 111 18 108 26C105.5 33 104.5 38 104.5 42L92 42Z' fill='%23C9A84C'/%3E%3Cellipse cx='46' cy='50' rx='7' ry='8' fill='%230A0A0F'/%3E%3Cellipse cx='74' cy='50' rx='7' ry='8' fill='%230A0A0F'/%3E%3Cpath d='M55 64C55 61 57 58 60 58C63 58 65 61 65 64L63 69C62 70.5 58 70.5 57 69L55 64Z' fill='%230A0A0F'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-deep: #0A0A0F;
+            --bg-dark: #101014;
+            --bg-surface: #141418;
+            --bg-card: #1A1A20;
+            --bg-card-hover: #1E1E26;
+            --gold: #C9A84C;
+            --gold-light: #D4B96A;
+            --gold-dim: #8B7535;
+            --gold-glow: rgba(201, 168, 76, 0.15);
+            --emerald: #1B6B4A;
+            --emerald-light: #2A8F64;
+            --ruby: #8B2252;
+            --ruby-light: #A83068;
+            --text-primary: #E8E4DD;
+            --text-secondary: #9A9690;
+            --text-dim: #5A5854;
+            --border: rgba(201, 168, 76, 0.12);
+            --border-light: rgba(201, 168, 76, 0.25);
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'PT Sans', Arial, sans-serif;
+            --nav-height: 64px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: var(--gold);
+            color: var(--bg-deep);
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--gold-light);
+        }
+
+        /* ============================================
+           SCROLL ANIMATIONS
+           ============================================ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ============================================
+           NAVIGATION
+           ============================================ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: var(--nav-height);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 clamp(1.5rem, 4vw, 3rem);
+            background: transparent;
+            transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+        }
+
+        .nav.scrolled {
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 1px 0 var(--border);
+        }
+
+        .nav__logo {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+
+        .nav__links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav__links a {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav__links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav__links a:hover {
+            color: var(--gold);
+        }
+
+        .nav__links a:hover::after {
+            width: 100%;
+        }
+
+        .nav__hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+            z-index: 1001;
+        }
+
+        .nav__hamburger span {
+            display: block;
+            width: 24px;
+            height: 1.5px;
+            background: var(--gold);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .nav__hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(4px, 5px);
+        }
+
+        .nav__hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav__hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(4px, -5px);
+        }
+
+        /* ============================================
+           DECORATIVE ELEMENTS
+           ============================================ */
+        .ornament-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            opacity: 0.5;
+        }
+
+        .ornament-divider__line {
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .ornament-divider__diamond {
+            width: 8px;
+            height: 8px;
+            border: 1px solid var(--gold);
+            transform: rotate(45deg);
+        }
+
+        .section-ornament {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-ornament svg {
+            width: 120px;
+            height: 20px;
+            opacity: 0.4;
+        }
+
+        /* SVG Bull Skull */
+        .bull-skull {
+            display: inline-block;
+        }
+
+        .bull-skull svg {
+            fill: var(--gold);
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .bull-skull:hover svg {
+            opacity: 1;
+        }
+
+        /* ============================================
+           SECTIONS — COMMON
+           ============================================ */
+        .section {
+            padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 4vw, 3rem);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section--wide {
+            max-width: 1400px;
+        }
+
+        .section__title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 500;
+            color: var(--gold);
+            text-align: center;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        .section__subtitle {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-secondary);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           HERO
+           ============================================ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 600px 400px at 50% 40%, rgba(201, 168, 76, 0.06) 0%, transparent 70%),
+                radial-gradient(ellipse 300px 500px at 30% 60%, rgba(27, 107, 74, 0.04) 0%, transparent 60%),
+                radial-gradient(ellipse 250px 400px at 70% 50%, rgba(139, 34, 82, 0.03) 0%, transparent 60%),
+                radial-gradient(circle 800px at 50% 50%, rgba(201, 168, 76, 0.03) 0%, transparent 80%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 70%, var(--bg-deep) 100%);
+            pointer-events: none;
+        }
+
+        /* Corner decorations */
+        .hero__corner {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .hero__corner--tl {
+            top: 2rem;
+            left: 2rem;
+        }
+
+        .hero__corner--tr {
+            top: 2rem;
+            right: 2rem;
+            transform: scaleX(-1);
+        }
+
+        .hero__corner--bl {
+            bottom: 2rem;
+            left: 2rem;
+            transform: scaleY(-1);
+        }
+
+        .hero__corner--br {
+            bottom: 2rem;
+            right: 2rem;
+            transform: scale(-1);
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .hero__skull {
+            margin-bottom: 2rem;
+        }
+
+        .hero__skull svg {
+            width: 90px;
+            height: 80px;
+            fill: var(--gold);
+            opacity: 0.7;
+            filter: drop-shadow(0 0 20px rgba(201, 168, 76, 0.15));
+            transition: opacity 0.4s ease;
+        }
+
+        .hero__skull:hover svg {
+            opacity: 0.9;
+        }
+
+        .hero__ornament-top {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero__ornament-top svg {
+            width: 200px;
+            height: 30px;
+            opacity: 0.35;
+        }
+
+        .hero__title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            font-weight: 500;
+            color: var(--gold);
+            letter-spacing: 0.08em;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 80px rgba(201, 168, 76, 0.2);
+        }
+
+        .hero__subtitle {
+            font-family: var(--font-heading);
+            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+            font-weight: 400;
+            font-style: italic;
+            color: var(--text-primary);
+            letter-spacing: 0.04em;
+            margin-bottom: 0.75rem;
+            opacity: 0.85;
+        }
+
+        .hero__location {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero__ornament-bottom {
+            margin-top: 0;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero__ornament-bottom svg {
+            width: 160px;
+            height: 20px;
+            opacity: 0.3;
+            transform: scaleY(-1);
+        }
+
+        .btn {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            padding: 0.9rem 2.5rem;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease;
+            z-index: -1;
+        }
+
+        .btn:hover {
+            color: var(--bg-deep);
+        }
+
+        .btn:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .btn--ruby {
+            border-color: var(--ruby);
+            color: var(--text-primary);
+        }
+
+        .btn--ruby::before {
+            background: var(--ruby);
+        }
+
+        .btn--ruby:hover {
+            color: #fff;
+        }
+
+        .hero__scroll-hint {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.4;
+            animation: scrollHint 2s ease-in-out infinite;
+        }
+
+        .hero__scroll-hint span {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        .hero__scroll-hint svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--gold);
+        }
+
+        @keyframes scrollHint {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+
+        /* ============================================
+           PORTFOLIO
+           ============================================ */
+        .portfolio {
+            background: var(--bg-dark);
+            padding-top: 0;
+        }
+
+        .portfolio__inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 4vw, 3rem);
+        }
+
+        .portfolio__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .portfolio__card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 2px;
+            padding: 14px;
+            background: var(--bg-deep);
+        }
+
+        /* Thin gold frame on dark passepartout — outside the photo */
+        .portfolio__card-frame {
+            position: absolute;
+            inset: 6px;
+            border: 0.5px solid var(--gold-dim);
+            pointer-events: none;
+            z-index: 2;
+            transition: border-color 0.4s ease;
+        }
+
+        /* Corner accents */
+        .portfolio__card-frame::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 18px;
+            height: 18px;
+            border-top: 1px solid var(--gold);
+            border-left: 1px solid var(--gold);
+            opacity: 0.4;
+            transition: opacity 0.4s ease;
+        }
+
+        .portfolio__card-frame::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            right: -3px;
+            width: 18px;
+            height: 18px;
+            border-bottom: 1px solid var(--gold);
+            border-right: 1px solid var(--gold);
+            opacity: 0.4;
+            transition: opacity 0.4s ease;
+        }
+
+        .portfolio__card:hover .portfolio__card-frame {
+            border-color: var(--gold);
+        }
+
+        .portfolio__card:hover .portfolio__card-frame::before,
+        .portfolio__card:hover .portfolio__card-frame::after {
+            opacity: 0.8;
+        }
+
+        .portfolio__card img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.6s ease;
+        }
+
+        .portfolio__card::after {
+            content: '';
+            position: absolute;
+            inset: 14px;
+            background: linear-gradient(180deg, transparent 40%, rgba(10, 10, 15, 0.85) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .portfolio__card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(201, 168, 76, 0.08);
+        }
+
+        .portfolio__card:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio__card:hover::after {
+            opacity: 1;
+        }
+
+        .portfolio__card-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            z-index: 1;
+            transform: translateY(10px);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .portfolio__card:hover .portfolio__card-info {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .portfolio__card-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--gold);
+            margin-bottom: 0.25rem;
+        }
+
+        .portfolio__card-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.05em;
+        }
+
+        /* ============================================
+           PROCESS — 8-step grid with art nouveau frames
+           ============================================ */
+        .process__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            margin-top: 3rem;
+        }
+
+        .process__card {
+            position: relative;
+            padding: 2rem 1.5rem 1.5rem;
+            background: var(--bg-card);
+            transition: all 0.4s ease;
+        }
+
+        /* Thin gold art-nouveau frame */
+        .process__card::before {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border: 0.5px solid var(--gold-dim);
+            pointer-events: none;
+            transition: border-color 0.4s ease;
+        }
+
+        /* Corner flourish accents — top-left and bottom-right */
+        .process__card::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            border-top: 1px solid var(--gold);
+            border-left: 1px solid var(--gold);
+            opacity: 0.4;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .process__card-corner {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 20px;
+            height: 20px;
+            border-bottom: 1px solid var(--gold);
+            border-right: 1px solid var(--gold);
+            opacity: 0.4;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .process__card:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .process__card:hover::before {
+            border-color: var(--gold);
+        }
+
+        .process__card:hover::after,
+        .process__card:hover .process__card-corner {
+            opacity: 0.8;
+        }
+
+        .process__number {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: var(--gold);
+            opacity: 0.35;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.02em;
+        }
+
+        .process__card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.03em;
+        }
+
+        .process__card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        .process__card-detail {
+            margin-top: 0.75rem;
+            font-size: 0.75rem;
+            color: var(--gold-dim);
+            font-style: italic;
+            letter-spacing: 0.03em;
+        }
+
+        /* Connecting line between cards */
+        .process__flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem 0;
+            opacity: 0.3;
+        }
+
+        .process__flow svg {
+            width: 100%;
+            max-width: 800px;
+            height: 12px;
+        }
+
+        /* Process journey — horizontal photo strip */
+        .process__journey {
+            margin-top: 3rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .process__journey-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--gold);
+            text-align: center;
+            letter-spacing: 0.08em;
+            margin-bottom: 2rem;
+            opacity: 0.7;
+        }
+
+        .process__journey-strip {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            justify-content: center;
+        }
+
+        .process__journey-step {
+            text-align: center;
+            flex: 0 0 auto;
+            width: 180px;
+        }
+
+        .process__journey-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid var(--gold-dim);
+            margin: 0 auto 0.75rem;
+            display: block;
+            transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .process__journey-step:hover .process__journey-img {
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(201, 168, 76, 0.15);
+        }
+
+        .process__journey-label {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.06em;
+        }
+
+        .process__journey-num {
+            font-family: var(--font-heading);
+            font-size: 0.7rem;
+            color: var(--gold-dim);
+            letter-spacing: 0.15em;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .process__journey-arrow {
+            flex: 0 0 40px;
+            text-align: center;
+            color: var(--gold);
+            opacity: 0.25;
+            font-size: 0.9rem;
+            padding-bottom: 2rem;
+        }
+
+        .process__journey-arrow svg {
+            width: 30px;
+            height: 8px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1;
+        }
+
+        @media (max-width: 1024px) {
+            .process__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .process__journey-strip {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            .process__journey-step {
+                width: 140px;
+            }
+            .process__journey-img {
+                width: 120px;
+                height: 120px;
+            }
+            .process__journey-arrow {
+                flex: 0 0 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .process__grid {
+                grid-template-columns: 1fr;
+            }
+            .process__journey-strip {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .process__journey-arrow {
+                padding-bottom: 0;
+                transform: rotate(90deg);
+            }
+        }
+
+        /* ============================================
+           ABOUT
+           ============================================ */
+        .about {
+            background: var(--bg-dark);
+        }
+
+        .about__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 4vw, 3rem);
+        }
+
+        .about__content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about__text {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .about__text + .about__text {
+            margin-top: 1rem;
+        }
+
+        .about__quote {
+            margin-top: 3rem;
+            padding: 2rem 3rem;
+            position: relative;
+        }
+
+        .about__quote::before,
+        .about__quote::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about__quote::before { top: 0; }
+        .about__quote::after { bottom: 0; }
+
+        .about__quote p {
+            font-family: var(--font-heading);
+            font-size: clamp(1.3rem, 3vw, 1.7rem);
+            font-style: italic;
+            font-weight: 400;
+            color: var(--gold);
+            line-height: 1.5;
+            opacity: 0.85;
+        }
+
+        /* ============================================
+           SERVICES
+           ============================================ */
+        .services__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .services__card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services__card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .services__card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-light);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .services__card:hover::before {
+            opacity: 1;
+        }
+
+        .services__card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .services__card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .services__card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           TESTIMONIALS
+           ============================================ */
+        .testimonials {
+            background: var(--bg-dark);
+        }
+
+        .testimonials__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 4vw, 3rem);
+        }
+
+        .testimonials__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .testimonials__card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            position: relative;
+        }
+
+        .testimonials__card::before {
+            content: '\201C';
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            color: var(--gold);
+            opacity: 0.2;
+            position: absolute;
+            top: 0.5rem;
+            left: 1.5rem;
+            line-height: 1;
+        }
+
+        .testimonials__card blockquote {
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: var(--text-primary);
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            padding-top: 1rem;
+            font-style: italic;
+        }
+
+        .testimonials__author {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .testimonials__role {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-top: 0.2rem;
+        }
+
+        /* ============================================
+           CONTACT
+           ============================================ */
+        .contact__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 4vw, 3rem);
+        }
+
+        .contact__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact__info h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact__links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact__link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1rem;
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        .contact__link:hover {
+            color: var(--gold);
+        }
+
+        .contact__link-icon {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .contact__link:hover .contact__link-icon {
+            border-color: var(--gold);
+            background: var(--gold-glow);
+        }
+
+        .contact__link-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .contact__address {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .contact__address p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .contact__form form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form__group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form__group label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .form__group input,
+        .form__group textarea {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-primary);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 0.85rem 1rem;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form__group input:focus,
+        .form__group textarea:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px var(--gold-glow);
+        }
+
+        .form__group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form__submit {
+            align-self: flex-start;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--bg-deep);
+            border-top: 1px solid var(--border);
+            padding: 3rem clamp(1.5rem, 4vw, 3rem);
+        }
+
+        .footer__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .footer__brand {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--gold);
+            letter-spacing: 0.06em;
+        }
+
+        .footer__socials {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer__social {
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .footer__social:hover {
+            border-color: var(--gold);
+            background: var(--gold-glow);
+        }
+
+        .footer__social svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--text-secondary);
+            transition: fill 0.3s ease;
+        }
+
+        .footer__social:hover svg {
+            fill: var(--gold);
+        }
+
+        .footer__copy {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+        }
+
+        /* ============================================
+           MOBILE MENU OVERLAY
+           ============================================ */
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 10, 15, 0.97);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .mobile-menu a {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            letter-spacing: 0.08em;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--gold);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 1024px) {
+            .portfolio__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process__content {
+                flex-direction: column;
+            }
+
+            .process__images {
+                flex: none;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            .process__images img {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav__links {
+                display: none;
+            }
+
+            .nav__hamburger {
+                display: flex;
+            }
+
+            .hero__title {
+                font-size: clamp(2rem, 8vw, 3.5rem);
+            }
+
+            .hero__corner {
+                width: 60px;
+                height: 60px;
+            }
+
+            .portfolio__grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .portfolio__card {
+                aspect-ratio: 4 / 4;
+            }
+
+            .portfolio__card-info {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .portfolio__card::after {
+                opacity: 1;
+            }
+
+            .services__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact__content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .process__images {
+                flex-direction: column;
+            }
+
+            .process__images img {
+                width: 100%;
+            }
+
+            .about__quote {
+                padding: 2rem 1rem;
+            }
+        }
+
+        /* ============================================
+           PRINT
+           ============================================ */
+        /* ============================================
+           HERO SLIDESHOW
+           ============================================ */
+        .hero__slideshow {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero__slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: heroSlide 32.5s infinite;
+            will-change: opacity, transform;
+        }
+
+        .hero__slide:nth-child(1) {
+            background-image: url('img/tulips.jpg');
+            animation-delay: 0s;
+        }
+        .hero__slide:nth-child(2) {
+            background-image: url('img/roses-art-nouveau.jpg');
+            animation-delay: 6.5s;
+        }
+        .hero__slide:nth-child(3) {
+            background-image: url('img/kingfisher.jpg');
+            animation-delay: 13s;
+        }
+        .hero__slide:nth-child(4) {
+            background-image: url('img/parrot.jpg');
+            animation-delay: 19.5s;
+        }
+        .hero__slide:nth-child(5) {
+            background-image: url('img/flowers-frame.jpg');
+            animation-delay: 26s;
+        }
+
+        @keyframes heroSlide {
+            0%      { opacity: 0; transform: scale(1); }
+            4.6%    { opacity: 1; transform: scale(1); }
+            20%     { opacity: 1; transform: scale(1.1); }
+            24.6%   { opacity: 0; transform: scale(1.1); }
+            100%    { opacity: 0; transform: scale(1); }
+        }
+
+        .hero__slideshow-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 10, 15, 0.65);
+            z-index: 1;
+        }
+
+        /* ============================================
+           FLOATING WHATSAPP BUTTON
+           ============================================ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--bg-deep);
+            border: 1px solid var(--gold-dim);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+            animation: whatsappPulse 3s ease-in-out infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            border-color: var(--gold);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(201, 168, 76, 0.15);
+            animation: none;
+        }
+
+        .whatsapp-float svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--gold);
+            transition: fill 0.3s ease;
+        }
+
+        .whatsapp-float:hover svg {
+            fill: var(--gold-light);
+        }
+
+        @keyframes whatsappPulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); }
+            50% { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 0 6px rgba(201, 168, 76, 0.1); }
+        }
+
+        /* ============================================
+           ABOUT PHOTO
+           ============================================ */
+        .about__photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+            margin: 0 auto 2rem;
+            display: block;
+            opacity: 0.9;
+        }
+
+        /* ============================================
+           HOW TO ORDER
+           ============================================ */
+        .how-to-order {
+            background: var(--bg-dark);
+        }
+
+        .how-to-order__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 4vw, 3rem);
+        }
+
+        .how-to-order__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .how-to-order__grid::before {
+            content: '';
+            position: absolute;
+            top: 28px;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            border-top: 2px dashed var(--gold-dim);
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        .how-to-order__step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .how-to-order__number {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--gold);
+            background: var(--bg-dark);
+            margin: 0 auto 1.2rem;
+        }
+
+        .how-to-order__step h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .how-to-order__step p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           LIGHTBOX
+           ============================================ */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .lightbox__overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 10, 15, 0.92);
+        }
+
+        .lightbox__img {
+            position: relative;
+            z-index: 1;
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 2px;
+        }
+
+        .lightbox__title {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--gold);
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .lightbox__close {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            z-index: 2;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 2.5rem;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.3s ease;
+        }
+
+        .lightbox__close:hover {
+            color: var(--gold);
+        }
+
+        /* ============================================
+           SERVICES NOTE (replacing prices)
+           ============================================ */
+        .services__note {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .services__note a {
+            color: var(--gold);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .how-to-order__grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .how-to-order__grid::before {
+                top: 0;
+                bottom: 0;
+                left: 28px;
+                right: auto;
+                width: 1px;
+                height: auto;
+                border-top: none;
+                border-left: 2px dashed var(--gold-dim);
+            }
+
+            .how-to-order__step {
+                text-align: left;
+                display: flex;
+                gap: 1.2rem;
+                align-items: flex-start;
+            }
+
+            .how-to-order__number {
+                margin: 0;
+                flex-shrink: 0;
+            }
+        }
+
+        @media print {
+            .nav, .mobile-menu, .hero__scroll-hint, .nav__hamburger, .whatsapp-float {
+                display: none !important;
+            }
+
+            body {
+                background: #fff;
+                color: #111;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 2rem 0;
+            }
+
+            .hero::before, .hero::after, .hero__slideshow {
+                display: none;
+            }
+
+            .hero__title, .section__title, .about__quote p {
+                color: #111;
+            }
+
+            .contact__link {
+                color: #111;
+            }
+
+            .contact__form {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ====== NAVIGATION ====== -->
+    <nav class="nav" id="nav">
+        <div class="nav__logo">Дудкинъ</div>
+        <ul class="nav__links">
+            <li><a href="#portfolio">Работы</a></li>
+            <li><a href="#process">Мастерство</a></li>
+            <li><a href="#about">О мастерѣ</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#how-to-order">Заказать</a></li>
+            <li><a href="#testimonials">Отзывы</a></li>
+            <li><a href="#contact">Связаться</a></li>
+        </ul>
+        <button class="nav__hamburger" id="hamburger" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#portfolio">Работы</a>
+        <a href="#process">Мастерство</a>
+        <a href="#about">О мастерѣ</a>
+        <a href="#services">Услуги</a>
+        <a href="#how-to-order">Заказать</a>
+        <a href="#testimonials">Отзывы</a>
+        <a href="#contact">Связаться</a>
+    </div>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero" id="hero">
+        <!-- Fullscreen slideshow background -->
+        <div class="hero__slideshow">
+            <div class="hero__slide"></div>
+            <div class="hero__slide"></div>
+            <div class="hero__slide"></div>
+            <div class="hero__slide"></div>
+            <div class="hero__slide"></div>
+            <div class="hero__slideshow-overlay"></div>
+        </div>
+
+        <!-- Corner decorations -->
+        <svg class="hero__corner hero__corner--tl" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 118V60C2 30 30 2 60 2H118" stroke="#C9A84C" stroke-width="0.5"/>
+            <path d="M2 118V80C2 45 45 2 80 2H118" stroke="#C9A84C" stroke-width="0.3" opacity="0.5"/>
+            <circle cx="60" cy="2" r="2" fill="#C9A84C" opacity="0.6"/>
+            <circle cx="2" cy="60" r="2" fill="#C9A84C" opacity="0.6"/>
+        </svg>
+        <svg class="hero__corner hero__corner--tr" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 118V60C2 30 30 2 60 2H118" stroke="#C9A84C" stroke-width="0.5"/>
+            <path d="M2 118V80C2 45 45 2 80 2H118" stroke="#C9A84C" stroke-width="0.3" opacity="0.5"/>
+            <circle cx="60" cy="2" r="2" fill="#C9A84C" opacity="0.6"/>
+            <circle cx="2" cy="60" r="2" fill="#C9A84C" opacity="0.6"/>
+        </svg>
+        <svg class="hero__corner hero__corner--bl" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 118V60C2 30 30 2 60 2H118" stroke="#C9A84C" stroke-width="0.5"/>
+            <path d="M2 118V80C2 45 45 2 80 2H118" stroke="#C9A84C" stroke-width="0.3" opacity="0.5"/>
+            <circle cx="60" cy="2" r="2" fill="#C9A84C" opacity="0.6"/>
+            <circle cx="2" cy="60" r="2" fill="#C9A84C" opacity="0.6"/>
+        </svg>
+        <svg class="hero__corner hero__corner--br" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 118V60C2 30 30 2 60 2H118" stroke="#C9A84C" stroke-width="0.5"/>
+            <path d="M2 118V80C2 45 45 2 80 2H118" stroke="#C9A84C" stroke-width="0.3" opacity="0.5"/>
+            <circle cx="60" cy="2" r="2" fill="#C9A84C" opacity="0.6"/>
+            <circle cx="2" cy="60" r="2" fill="#C9A84C" opacity="0.6"/>
+        </svg>
+
+        <div class="hero__content">
+            <!-- Bull skull logo -->
+            <div class="hero__skull">
+                <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Horns -->
+                    <path d="M28 42C24 36 18 26 14 20C10 14 6 9 2 6C0.5 5 -0.5 7 0.8 8.5C5 14 10 22 13 30C15 36 16 40 16 43" stroke="currentColor" fill="none" stroke-width="0.3" opacity="0.3"/>
+                    <path d="M28 42C23 34 16 22 12 16C8 10 4 6 1 4" fill="var(--gold)" opacity="0.9"/>
+                    <path d="M1 4C-0.5 3 -1 5.5 0.5 6.5C4 10 9 18 12 26C14.5 33 15.5 38 15.5 42C16 44 18 46 20 45L28 42" fill="var(--gold)" opacity="0.9"/>
+
+                    <path d="M92 42C96 36 102 26 106 20C110 14 114 9 118 6C119.5 5 120.5 7 119.2 8.5C115 14 110 22 107 30C105 36 104 40 104 43" stroke="currentColor" fill="none" stroke-width="0.3" opacity="0.3"/>
+                    <path d="M92 42C97 34 104 22 108 16C112 10 116 6 119 4" fill="var(--gold)" opacity="0.9"/>
+                    <path d="M119 4C120.5 3 121 5.5 119.5 6.5C116 10 111 18 108 26C105.5 33 104.5 38 104.5 42C104 44 102 46 100 45L92 42" fill="var(--gold)" opacity="0.9"/>
+
+                    <!-- Skull main shape -->
+                    <path d="M60 95C60 95 50 82 46 74C42 66 39 58 38 52C37 46 38 40 42 36C44 34 46 33 48 33C46 30 44 26 42 22L28 42C30 44 32 46 32 50C30 48 26 48 22 50C18 52 16 56 16 60C16 66 20 72 26 74C28 75 30 74 30 72C30 68 32 64 36 62C36 66 38 72 42 78C46 84 52 90 60 95Z" fill="var(--gold)"/>
+                    <path d="M60 95C60 95 70 82 74 74C78 66 81 58 82 52C83 46 82 40 78 36C76 34 74 33 72 33C74 30 76 26 78 22L92 42C90 44 88 46 88 50C90 48 94 48 98 50C102 52 104 56 104 60C104 66 100 72 94 74C92 75 90 74 90 72C90 68 88 64 84 62C84 66 82 72 78 78C74 84 68 90 60 95Z" fill="var(--gold)"/>
+
+                    <!-- Forehead detail -->
+                    <path d="M48 33C50 30 54 28 60 28C66 28 70 30 72 33C70 36 66 38 60 38C54 38 50 36 48 33Z" fill="var(--gold)" opacity="0.7"/>
+
+                    <!-- Eye sockets -->
+                    <ellipse cx="46" cy="50" rx="7" ry="8" fill="var(--bg-deep)"/>
+                    <ellipse cx="74" cy="50" rx="7" ry="8" fill="var(--bg-deep)"/>
+                    <ellipse cx="46" cy="50" rx="5.5" ry="6.5" fill="none" stroke="var(--gold)" stroke-width="0.5" opacity="0.3"/>
+                    <ellipse cx="74" cy="50" rx="5.5" ry="6.5" fill="none" stroke="var(--gold)" stroke-width="0.5" opacity="0.3"/>
+
+                    <!-- Nose -->
+                    <path d="M55 64C55 61 57 58 60 58C63 58 65 61 65 64L63 69C62 70.5 58 70.5 57 69L55 64Z" fill="var(--bg-deep)"/>
+                    <path d="M56 64C56 62 57.5 59.5 60 59.5C62.5 59.5 64 62 64 64" fill="none" stroke="var(--gold)" stroke-width="0.4" opacity="0.3"/>
+
+                    <!-- Cheekbone lines -->
+                    <path d="M38 55C40 58 43 60 46 60" fill="none" stroke="var(--gold)" stroke-width="0.4" opacity="0.25"/>
+                    <path d="M82 55C80 58 77 60 74 60" fill="none" stroke="var(--gold)" stroke-width="0.4" opacity="0.25"/>
+
+                    <!-- Center line -->
+                    <line x1="60" y1="38" x2="60" y2="58" stroke="var(--gold)" stroke-width="0.3" opacity="0.15"/>
+                </svg>
+            </div>
+
+            <!-- Art Nouveau ornament -->
+            <div class="hero__ornament-top">
+                <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#C9A84C" stroke-width="0.6">
+                    <path d="M0 15H60C65 15 70 10 75 10C80 10 82 15 85 15C88 15 90 10 95 10C100 10 100 15 100 15C100 15 100 10 105 10C110 10 112 15 115 15C118 15 120 10 125 10C130 10 135 15 140 15H200"/>
+                    <circle cx="100" cy="15" r="3" fill="#C9A84C" opacity="0.3"/>
+                    <circle cx="75" cy="10" r="1.5" fill="#C9A84C" opacity="0.3"/>
+                    <circle cx="125" cy="10" r="1.5" fill="#C9A84C" opacity="0.3"/>
+                </svg>
+            </div>
+
+            <h1 class="hero__title">Витражное дѣло<br>Дудкинъ</h1>
+            <p class="hero__subtitle">Авторские витражи ручной работы</p>
+            <p class="hero__location">Чеховъ — Москва &bull; съ 2018 года</p>
+
+            <!-- Bottom ornament -->
+            <div class="hero__ornament-bottom">
+                <svg viewBox="0 0 160 20" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#C9A84C" stroke-width="0.5">
+                    <path d="M0 10H50C55 10 60 5 65 5C70 5 72 10 75 10H85C88 10 90 5 95 5C100 5 105 10 110 10H160"/>
+                    <circle cx="80" cy="10" r="2" fill="#C9A84C" opacity="0.2"/>
+                </svg>
+            </div>
+
+            <a href="#contact" class="btn">Обсудить проект</a>
+        </div>
+
+        <div class="hero__scroll-hint">
+            <span>Работы</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ====== PORTFOLIO ====== -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio__inner">
+            <div class="section-ornament fade-in">
+                <div class="ornament-divider">
+                    <div class="ornament-divider__line"></div>
+                    <div class="ornament-divider__diamond"></div>
+                    <div class="ornament-divider__line"></div>
+                </div>
+            </div>
+            <h2 class="section__title fade-in">Наши работы</h2>
+            <p class="section__subtitle fade-in">Каждый витраж — уникальное произведение, созданное вручную отъ первого штриха до послѣдняго луча свѣта</p>
+
+            <div class="portfolio__grid">
+                <div class="portfolio__card fade-in">
+                    <div class="portfolio__card-frame"></div>
+                    <img src="img/roses-art-nouveau.jpg" alt="Витраж Тиффани — Розы в стиле Арт-Нуво" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info">
+                        <div class="portfolio__card-title">Розы Арт-Нуво</div>
+                        <div class="portfolio__card-desc">Витраж Тиффани</div>
+                    </div>
+                </div>
+                <div class="portfolio__card fade-in">
+                    <div class="portfolio__card-frame"></div>
+                    <img src="img/mosaic-flowers-bw.jpg" alt="Мозаичное панно — Белые цветы" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info">
+                        <div class="portfolio__card-title">Белые цветы</div>
+                        <div class="portfolio__card-desc">Мозаичное панно</div>
+                    </div>
+                </div>
+                <div class="portfolio__card fade-in">
+                    <div class="portfolio__card-frame"></div>
+                    <img src="img/kingfisher.jpg" alt="Витражное панно — Зимородок" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info">
+                        <div class="portfolio__card-title">Зимородокъ</div>
+                        <div class="portfolio__card-desc">Витражное панно</div>
+                    </div>
+                </div>
+                <div class="portfolio__card fade-in">
+                    <div class="portfolio__card-frame"></div>
+                    <img src="img/tulips.jpg" alt="Витраж с подсветкой — Тюльпаны" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info">
+                        <div class="portfolio__card-title">Тюльпаны</div>
+                        <div class="portfolio__card-desc">Витраж с подсветкой</div>
+                    </div>
+                </div>
+                <div class="portfolio__card fade-in">
+                    <div class="portfolio__card-frame"></div>
+                    <img src="img/parrot.jpg" alt="Мозаика в раме — Попугай в саду" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info">
+                        <div class="portfolio__card-title">Попугай въ саду</div>
+                        <div class="portfolio__card-desc">Мозаика в раме</div>
+                    </div>
+                </div>
+                <div class="portfolio__card fade-in">
+                    <div class="portfolio__card-frame"></div>
+                    <img src="img/mirror.jpg" alt="Витражное зеркало — Цветочное зеркало" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info">
+                        <div class="portfolio__card-title">Цвѣточное зеркало</div>
+                        <div class="portfolio__card-desc">Витражное зеркало</div>
+                    </div>
+                </div>
+                <div class="portfolio__card fade-in">
+                    <div class="portfolio__card-frame"></div>
+                    <img src="img/guitar.jpg" alt="Мозаика из стекла — Гитара" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info">
+                        <div class="portfolio__card-title">Гитара</div>
+                        <div class="portfolio__card-desc">Мозаика из стекла</div>
+                    </div>
+                </div>
+                <div class="portfolio__card fade-in">
+                    <div class="portfolio__card-frame"></div>
+                    <img src="img/arch-window.jpg" alt="Архитектурный витраж — Арочное окно" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info">
+                        <div class="portfolio__card-title">Арочное окно</div>
+                        <div class="portfolio__card-desc">Архитектурный витраж</div>
+                    </div>
+                </div>
+                <div class="portfolio__card fade-in">
+                    <div class="portfolio__card-frame"></div>
+                    <img src="img/abstract-transom.jpg" alt="Фрамуга — Абстракция" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info">
+                        <div class="portfolio__card-title">Абстракция</div>
+                        <div class="portfolio__card-desc">Фрамуга</div>
+                    </div>
+                </div>
+                <div class="portfolio__card fade-in">
+                    <div class="portfolio__card-frame"></div>
+                    <img src="img/flowers-frame.jpg" alt="Витраж в деревянной раме — Полевые цветы" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info">
+                        <div class="portfolio__card-title">Полевые цвѣты</div>
+                        <div class="portfolio__card-desc">Витраж в деревянной раме</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PROCESS ====== -->
+    <section class="section" id="process">
+        <div class="section-ornament fade-in">
+            <div class="ornament-divider">
+                <div class="ornament-divider__line"></div>
+                <div class="ornament-divider__diamond"></div>
+                <div class="ornament-divider__line"></div>
+            </div>
+        </div>
+        <h2 class="section__title fade-in">Отъ эскиза до установки</h2>
+        <p class="section__subtitle fade-in">Восемь этаповъ создания авторскаго витража в техникѣ Тиффани</p>
+
+        <div class="process__grid">
+            <div class="process__card fade-in">
+                <div class="process__card-corner"></div>
+                <div class="process__number">01</div>
+                <h3>Замыселъ</h3>
+                <p>Обсуждаем идею, мѣсто установки, размѣры и стиль. Изучаем освѣщение — оно опредѣляетъ, какъ витражъ будетъ жить въ пространствѣ.</p>
+                <div class="process__card-detail">Бесплатная консультация</div>
+            </div>
+            <div class="process__card fade-in">
+                <div class="process__card-corner"></div>
+                <div class="process__number">02</div>
+                <h3>Эскизъ</h3>
+                <p>Создаём авторский рисунокъ в натуральную величину — картонъ. Каждая линия — будущий свинцовый переплётъ или мѣдная фольга.</p>
+                <div class="process__card-detail">Карандашъ, акварель, картонъ</div>
+            </div>
+            <div class="process__card fade-in">
+                <div class="process__card-corner"></div>
+                <div class="process__number">03</div>
+                <h3>Подборъ стекла</h3>
+                <p>Американское и европейское витражное стекло — Spectrum, Uroboros, Wissmach. Подбираемъ оттѣнки, фактуры и степень прозрачности на свѣтовомъ столѣ.</p>
+                <div class="process__card-detail">Болѣе 200 видовъ стекла</div>
+            </div>
+            <div class="process__card fade-in">
+                <div class="process__card-corner"></div>
+                <div class="process__number">04</div>
+                <h3>Раскрой</h3>
+                <p>Каждый элементъ вырѣзается стеклорѣзомъ по шаблону. Сложные кривые — ломка щипцами по надрѣзу. Ни одинъ кусокъ не повторяется.</p>
+                <div class="process__card-detail">Ручная рѣзка, до 300 элементовъ</div>
+            </div>
+            <div class="process__card fade-in">
+                <div class="process__card-corner"></div>
+                <div class="process__number">05</div>
+                <h3>Шлифовка</h3>
+                <p>Края каждаго элемента обрабатываются на алмазномъ шлифовальномъ станкѣ для идеальнаго прилегания деталей другъ к другу.</p>
+                <div class="process__card-detail">Точность до 0.5 мм</div>
+            </div>
+            <div class="process__card fade-in">
+                <div class="process__card-corner"></div>
+                <div class="process__number">06</div>
+                <h3>Мѣдная фольга</h3>
+                <p>Сердце техники Тиффани: каждый кусокъ стекла оборачивается тонкой мѣдной лентой. Это позволяетъ создавать объёмные формы и тончайшие линии.</p>
+                <div class="process__card-detail">Фольга 4.8–6.4 мм</div>
+            </div>
+            <div class="process__card fade-in">
+                <div class="process__card-corner"></div>
+                <div class="process__number">07</div>
+                <h3>Пайка</h3>
+                <p>Оловянный припой соединяетъ всѣ элементы. Сначала — точечная фиксация, затѣмъ — ровный выпуклый шовъ по каждому стыку. Двусторонняя пайка.</p>
+                <div class="process__card-detail">Припой, флюсъ, 360°С</div>
+            </div>
+            <div class="process__card fade-in">
+                <div class="process__card-corner"></div>
+                <div class="process__number">08</div>
+                <h3>Патина и финишъ</h3>
+                <p>Патинирование придаётъ швамъ благородный тёмный или мѣдный оттѣнокъ. Полировка, обрамление, установка витража на мѣсто.</p>
+                <div class="process__card-detail">Чёрная или мѣдная патина</div>
+            </div>
+        </div>
+
+        <!-- Process journey — step by step photo strip -->
+        <div class="process__journey fade-in">
+            <div class="process__journey-title">Путь витража</div>
+            <div class="process__journey-strip">
+                <div class="process__journey-step">
+                    <span class="process__journey-num">01</span>
+                    <img src="img/step-sketch.jpg" alt="Авторский эскиз витража" class="process__journey-img" loading="lazy">
+                    <div class="process__journey-label">Эскизъ</div>
+                </div>
+                <div class="process__journey-arrow">
+                    <svg viewBox="0 0 30 8"><path d="M0 4h26M22 1l4 3-4 3"/></svg>
+                </div>
+                <div class="process__journey-step">
+                    <span class="process__journey-num">02</span>
+                    <img src="img/step-cutting.jpg" alt="Раскрой и сборка на шаблоне" class="process__journey-img" loading="lazy">
+                    <div class="process__journey-label">Раскрой и сборка</div>
+                </div>
+                <div class="process__journey-arrow">
+                    <svg viewBox="0 0 30 8"><path d="M0 4h26M22 1l4 3-4 3"/></svg>
+                </div>
+                <div class="process__journey-step">
+                    <span class="process__journey-num">03</span>
+                    <img src="img/step-final.jpg" alt="Готовый витраж — зимородок на магнолиях" class="process__journey-img" loading="lazy">
+                    <div class="process__journey-label">Готовый витражъ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== ABOUT ====== -->
+    <section class="about" id="about">
+        <div class="about__inner">
+            <div class="section-ornament fade-in">
+                <div class="ornament-divider">
+                    <div class="ornament-divider__line"></div>
+                    <div class="ornament-divider__diamond"></div>
+                    <div class="ornament-divider__line"></div>
+                </div>
+            </div>
+            <h2 class="section__title fade-in">Александръ Дудкинъ</h2>
+
+            <div class="about__content fade-in">
+                <img src="img/master.jpg" alt="Александр Дудкин — художник-витражист" class="about__photo" loading="lazy">
+                <p class="about__text">
+                    Художник-витражист с классическим художественным образованием. Путь к витражному искусству начался с живописи — именно умение работать с цветом, светом и композицией отличает каждую работу мастерской.
+                </p>
+                <p class="about__text">
+                    Витражное дѣло Дудкинъ — это авторская мастерская полного цикла: от первого эскиза карандашом до последнего штриха патины. Каждый витраж создаётся вручную в технике Тиффани с использованием лучшего американского и европейского стекла.
+                </p>
+                <p class="about__text">
+                    Философия мастерской проста: витраж — это не декоративное стекло, а живая картина, которая меняется с каждым лучом света.
+                </p>
+
+                <div class="about__quote">
+                    <p>&laquo;Каждый витражъ — это картина, написанная свѣтомъ&raquo;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SERVICES ====== -->
+    <section class="section" id="services">
+        <div class="section-ornament fade-in">
+            <div class="ornament-divider">
+                <div class="ornament-divider__line"></div>
+                <div class="ornament-divider__diamond"></div>
+                <div class="ornament-divider__line"></div>
+            </div>
+        </div>
+        <h2 class="section__title fade-in">Что мы создаёмъ</h2>
+        <p class="section__subtitle fade-in">Витражи для интерьера, архитектуры и души</p>
+
+        <div class="services__grid">
+            <div class="services__card fade-in">
+                <span class="services__card-icon">&#9670;</span>
+                <h3>Витражные панно и окна</h3>
+                <p>Авторские витражи для оконных проёмов, перегородок и ниш. Техника Тиффани с медной фольгой.</p>
+            </div>
+            <div class="services__card fade-in">
+                <span class="services__card-icon">&#9671;</span>
+                <h3>Витражные зеркала</h3>
+                <p>Зеркала в витражном обрамлении — уникальный элемент декора для любого интерьера.</p>
+            </div>
+            <div class="services__card fade-in">
+                <span class="services__card-icon">&#9646;</span>
+                <h3>Мозаичные панно</h3>
+                <p>Декоративные панно из колотого и резаного стекла для стен, столешниц и фасадов.</p>
+            </div>
+            <div class="services__card fade-in">
+                <span class="services__card-icon">&#10022;</span>
+                <h3>Декоративные издѣлия</h3>
+                <p>Подсвечники, часы, ночники и другие предметы из витражного стекла ручной работы.</p>
+            </div>
+            <div class="services__card fade-in">
+                <span class="services__card-icon">&#9681;</span>
+                <h3>Реставрация витражей</h3>
+                <p>Бережная реставрация старинных витражей с сохранением оригинальных материалов и техник.</p>
+            </div>
+            <div class="services__card fade-in">
+                <span class="services__card-icon">&#9733;</span>
+                <h3>Мастеръ-классы</h3>
+                <p>Обучение технике Тиффани для начинающих и продвинутых. Индивидуальные и групповые занятия.</p>
+            </div>
+        </div>
+        <p class="services__note">Стоимость каждого издѣлия разсчитывается индивидуально. <a href="#contact">Обсудить проектъ</a></p>
+    </section>
+
+    <!-- ====== HOW TO ORDER ====== -->
+    <section class="how-to-order" id="how-to-order">
+        <div class="how-to-order__inner">
+            <div class="section-ornament fade-in">
+                <div class="ornament-divider">
+                    <div class="ornament-divider__line"></div>
+                    <div class="ornament-divider__diamond"></div>
+                    <div class="ornament-divider__line"></div>
+                </div>
+            </div>
+            <h2 class="section__title fade-in">Какъ заказать</h2>
+
+            <div class="how-to-order__grid">
+                <div class="how-to-order__step fade-in">
+                    <div class="how-to-order__number">1</div>
+                    <div>
+                        <h3>Консультация</h3>
+                        <p>Обсуждаем вашу идею, мѣсто установки и пожелания. Бесплатно.</p>
+                    </div>
+                </div>
+                <div class="how-to-order__step fade-in">
+                    <div class="how-to-order__number">2</div>
+                    <div>
+                        <h3>Эскизъ</h3>
+                        <p>Создаём авторский эскиз витража с учётом размѣровъ и стиля интерьера.</p>
+                    </div>
+                </div>
+                <div class="how-to-order__step fade-in">
+                    <div class="how-to-order__number">3</div>
+                    <div>
+                        <h3>Изготовление</h3>
+                        <p>Ручная работа в мастерской. Срокъ: 2–4 недѣли.</p>
+                    </div>
+                </div>
+                <div class="how-to-order__step fade-in">
+                    <div class="how-to-order__number">4</div>
+                    <div>
+                        <h3>Установка</h3>
+                        <p>Доставка и монтажъ витража. Работаем по всей Московской области.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== TESTIMONIALS ====== -->
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials__inner">
+            <div class="section-ornament fade-in">
+                <div class="ornament-divider">
+                    <div class="ornament-divider__line"></div>
+                    <div class="ornament-divider__diamond"></div>
+                    <div class="ornament-divider__line"></div>
+                </div>
+            </div>
+            <h2 class="section__title fade-in">Что говорятъ о насъ</h2>
+            <p class="section__subtitle fade-in">Отзывы нашихъ заказчиковъ</p>
+
+            <div class="testimonials__grid">
+                <div class="testimonials__card fade-in">
+                    <blockquote>Заказывали витражное окно в загородный дом. Александр создал эскиз, который превзошёл все ожидания. Когда солнце проходит через стекло — это магия. Рекомендуем всем, кто ценит настоящее искусство.</blockquote>
+                    <div class="testimonials__author">Марина К.</div>
+                    <div class="testimonials__role">дизайнер интерьеров</div>
+                </div>
+                <div class="testimonials__card fade-in">
+                    <blockquote>Витражное зеркало стало главным украшением нашей гостиной. Мастерская Дудкина — это сочетание художественного вкуса и безупречного качества исполнения.</blockquote>
+                    <div class="testimonials__author">Андрей и Елена В.</div>
+                    <div class="testimonials__role">Москва</div>
+                </div>
+                <div class="testimonials__card fade-in">
+                    <blockquote>Обратился за реставрацией старого витража в особняке начала XX века. Работа выполнена с невероятным уважением к оригиналу. Александр — настоящий мастер своего дела.</blockquote>
+                    <div class="testimonials__author">Игорь С.</div>
+                    <div class="testimonials__role">архитектор</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section id="contact">
+        <div class="contact__inner">
+            <div class="section-ornament fade-in">
+                <div class="ornament-divider">
+                    <div class="ornament-divider__line"></div>
+                    <div class="ornament-divider__diamond"></div>
+                    <div class="ornament-divider__line"></div>
+                </div>
+            </div>
+            <h2 class="section__title fade-in">Начнёмъ разговоръ</h2>
+            <p class="section__subtitle fade-in">Каждый витраж начинается с идеи. Разскажите о вашемъ проектѣ.</p>
+
+            <div class="contact__content">
+                <div class="contact__info fade-in-left">
+                    <h3>Связаться с нами</h3>
+                    <div class="contact__links">
+                        <a href="tel:+79772921707" class="contact__link">
+                            <span class="contact__link-icon">
+                                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </span>
+                            +7 977 292-17-07
+                        </a>
+                        <a href="https://wa.me/79772921707" target="_blank" rel="noopener" class="contact__link">
+                            <span class="contact__link-icon">
+                                <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </span>
+                            WhatsApp
+                        </a>
+                        <a href="https://t.me/+79772921707" target="_blank" rel="noopener" class="contact__link">
+                            <span class="contact__link-icon">
+                                <svg viewBox="0 0 24 24"><path d="M21.2 4.4L2.4 11.4c-.5.2-.5.9.1 1l4.8 1.5 1.9 6c.1.4.6.5.9.3l2.7-2.2 5.3 3.9c.4.3 1 .1 1.1-.4l3.2-15.4c.1-.6-.5-1-.2-.7zM9.6 14.4l-.4 3.8L8 14.5l10.3-7.5-10.7 7.4z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </span>
+                            Telegram
+                        </a>
+                        <a href="mailto:vitrazh.dudkin@yandex.ru" class="contact__link">
+                            <span class="contact__link-icon">
+                                <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </span>
+                            vitrazh.dudkin@yandex.ru
+                        </a>
+                    </div>
+
+                    <div class="contact__address">
+                        <p>&#128205; г. Чехов, Московская область</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-dim);">Работаем по всей Московской области и за её пределами</p>
+                    </div>
+                </div>
+
+                <div class="contact__form fade-in-right">
+                    <form id="contactForm" action="#" method="post" onsubmit="return sendToWhatsApp(event);">
+                        <div class="form__group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" placeholder="Расскажите о вашей идее — размер, место установки, пожелания по стилю..."></textarea>
+                        </div>
+                        <div class="form__submit">
+                            <button type="submit" class="btn btn--ruby">Отправить заявку</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="bull-skull">
+                <svg width="36" height="32" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 88C50 88 42 78 38 70C34 62 32 55 32 50C32 42 36 36 40 32C38 28 34 20 28 14C24 10 18 6 10 4C8 3.5 6 5 7 7C10 14 14 22 16 28C18 34 18 38 18 40C12 44 8 50 8 58C8 64 12 70 18 72C20 73 22 72 22 70C22 66 24 62 28 60C30 68 34 74 40 78C42 80 46 84 50 88C54 84 58 80 60 78C66 74 70 68 72 60C76 62 78 66 78 70C78 72 80 73 82 72C88 70 92 64 92 58C92 50 88 44 82 40C82 38 82 34 84 28C86 22 90 14 93 7C94 5 92 3.5 90 4C82 6 76 10 72 14C66 20 62 28 60 32C64 36 68 42 68 50C68 55 66 62 62 70C58 78 50 88 50 88Z"/>
+                    <ellipse cx="38" cy="48" rx="6" ry="7" fill="#0A0A0F"/>
+                    <ellipse cx="62" cy="48" rx="6" ry="7" fill="#0A0A0F"/>
+                    <path d="M46 60C46 58 48 56 50 56C52 56 54 58 54 60L52 64C51 65 49 65 48 64L46 60Z" fill="#0A0A0F"/>
+                </svg>
+            </div>
+
+            <div class="footer__brand">Витражное дѣло Дудкинъ</div>
+
+            <div class="footer__socials">
+                <a href="#" class="footer__social" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+                </a>
+                <a href="#" class="footer__social" aria-label="VK">
+                    <svg viewBox="0 0 24 24"><path d="M2 12.5C2 8 2 5.75 3.38 4.38 4.75 3 7 3 11.5 3h1c4.5 0 6.75 0 8.13 1.38C22 5.75 22 8 22 12.5v-1c0 4.5 0 6.75-1.37 8.12C19.25 21 17 21 12.5 21h-1c-4.5 0-6.75 0-8.12-1.38C2 18.25 2 16 2 11.5zm3.47.38h1.6c.08 1.6.75 2.28 1.32 2.42V12.88h1.5v1.52c.56-.06 1.14-.7 1.34-1.52h1.5a3.2 3.2 0 0 1-1.24 1.82A3.3 3.3 0 0 0 12 16.5h.3c2.35 0 3.68-1.63 3.68-4.1h1.5c0 1.66-.36 2.94-1.07 3.82.71.88 1.57 1.28 2.59 1.28v1.5c-1.4 0-2.53-.63-3.36-1.7-1 1.12-2.4 1.7-4.14 1.7-3 0-5.03-2.3-5.53-5.12z"/></svg>
+                </a>
+                <a href="#" class="footer__social" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#0A0A0F"/></svg>
+                </a>
+            </div>
+
+            <div class="footer__copy">
+                &copy; 2018&mdash;2026 Витражное дѣло Дудкинъ &bull; Всѣ права защищены
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== FLOATING WHATSAPP ====== -->
+    <a href="https://wa.me/79772921707?text=Здравствуйте!%20Интересует%20витраж%20на%20заказ" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- ====== LIGHTBOX ====== -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox__overlay"></div>
+        <button class="lightbox__close" aria-label="Закрыть">&times;</button>
+        <img class="lightbox__img" src="" alt="">
+        <div class="lightbox__title"></div>
+    </div>
+
+    <!-- ====== JAVASCRIPT ====== -->
+    <script>
+        // Sticky nav on scroll
+        const nav = document.getElementById('nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 80) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        }, { passive: true });
+
+        // Mobile hamburger toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Scroll-triggered fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Stagger animation for grid items
+        document.querySelectorAll('.portfolio__grid .fade-in, .services__grid .fade-in, .testimonials__grid .fade-in, .how-to-order__grid .fade-in, .process__grid .fade-in').forEach((el, i) => {
+            el.style.transitionDelay = `${i * 0.05}s`;
+        });
+
+        // Form → WhatsApp redirect
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+            if (!name || !phone) { alert('Пожалуйста, заполните имя и телефон'); return false; }
+
+            // Send to Telegram
+            const tgToken = '8706280124:AAEIEMlCe5KBFjKwXHXT6Oo_pv0EMwtX7yw';
+            const tgChat = '5083163504';
+            const tgText = '📩 Новая заявка с сайта!\n\n👤 Имя: ' + name + '\n📱 Телефон: ' + phone + (message ? '\n💬 Сообщение: ' + message : '');
+            fetch('https://api.telegram.org/bot' + tgToken + '/sendMessage', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({chat_id: tgChat, text: tgText, parse_mode: 'HTML'})
+            }).catch(() => {});
+
+            // Also open WhatsApp
+            let waText = 'Здравствуйте! Меня зовут ' + name + ', тел: ' + phone + '.';
+            if (message) waText += ' ' + message;
+            window.open('https://wa.me/79772921707?text=' + encodeURIComponent(waText), '_blank');
+
+            // Show success
+            e.target.reset();
+            const btn = e.target.querySelector('.btn');
+            const orig = btn.textContent;
+            btn.textContent = '✓ Заявка отправлена';
+            btn.style.borderColor = '#2a8f64';
+            btn.style.color = '#2a8f64';
+            setTimeout(() => { btn.textContent = orig; btn.style.borderColor = ''; btn.style.color = ''; }, 3000);
+
+            return false;
+        }
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('.lightbox__img');
+        const lightboxTitle = lightbox.querySelector('.lightbox__title');
+
+        document.querySelectorAll('.portfolio__card').forEach(card => {
+            card.addEventListener('click', () => {
+                const img = card.querySelector('img');
+                const title = card.querySelector('.portfolio__card-title');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightboxTitle.textContent = title ? title.textContent : '';
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        lightbox.querySelector('.lightbox__overlay').addEventListener('click', closeLightbox);
+        lightbox.querySelector('.lightbox__close').addEventListener('click', closeLightbox);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+        });
+
+        // Smooth scroll for anchor links (fallback for older browsers)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = nav.offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
