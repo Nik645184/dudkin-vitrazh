@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Реставрация витражей в Москве и МО. Восстановление старинных витражей Тиффани, церковных окон, антикварных панно. Мастерская Дудкинъ — бережная работа с историей.">
+    <meta name="keywords" content="реставрация витражей, восстановление витражей, реставрация витражей Тиффани, ремонт витражей, реставрация церковных витражей, Москва">
+    <meta property="og:title" content="Реставрация витражей в Москве — мастерская Дудкинъ">
+    <meta property="og:description" content="Бережная реставрация старинных витражей. Восстановление витражей Тиффани, церковных окон, антикварных панно.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:url" content="https://dudkin.co/restavraciya/">
+    <meta property="og:image" content="https://dudkin.co/img/roses-detail.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Витражное дело Дудкинъ">
+    <link rel="canonical" href="https://dudkin.co/restavraciya/">
+    <title>Реставрация витражей в Москве — мастерская Дудкинъ</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Реставрация витражей",
+  "description": "Бережная реставрация старинных витражей: витражи Тиффани, церковные окна, антикварные панно. Полный цикл от осмотра до установки.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Витражное дело Дудкинъ",
+    "url": "https://dudkin.co",
+    "telephone": "+79772921707",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Жуковский",
+      "addressRegion": "Московская область",
+      "addressCountry": "RU"
+    }
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Москва"},
+    {"@type": "State", "name": "Московская область"}
+  ],
+  "serviceType": "Реставрация витражей",
+  "url": "https://dudkin.co/restavraciya/"
+}
+</script>
+
+    <style>
+        /* ---- page-specific styles ---- */
+        .rest-hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: calc(var(--nav-height) + 3rem) 2rem 4rem;
+            overflow: hidden;
+        }
+
+        .rest-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 500px 350px at 50% 45%, rgba(201, 168, 76, 0.07) 0%, transparent 70%),
+                radial-gradient(ellipse 300px 400px at 35% 55%, rgba(139, 34, 82, 0.04) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .rest-hero__content {
+            position: relative;
+            z-index: 2;
+            max-width: 780px;
+        }
+
+        .rest-hero__title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.2rem, 6vw, 4rem);
+            font-weight: 500;
+            color: var(--gold);
+            letter-spacing: 0.06em;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+        }
+
+        .rest-hero__lead {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            line-height: 1.8;
+            opacity: 0.9;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        /* What we restore */
+        .restore-types {
+            background: var(--bg-dark);
+        }
+
+        .restore-types__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .restore-types__card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .restore-types__card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .restore-types__card:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .restore-types__card:hover::before {
+            opacity: 1;
+        }
+
+        .restore-types__icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .restore-types__card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+        }
+
+        .restore-types__card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* Process section */
+        .rest-process__steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .rest-process__step {
+            background: var(--bg-card);
+            padding: 2rem 1.5rem;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .rest-process__step::before {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border: 0.5px solid var(--gold-dim);
+            pointer-events: none;
+            transition: border-color 0.4s ease;
+        }
+
+        .rest-process__step:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-3px);
+        }
+
+        .rest-process__step:hover::before {
+            border-color: var(--gold);
+        }
+
+        .rest-process__num {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--gold);
+            opacity: 0.35;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .rest-process__step h3 {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .rest-process__step p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* Images row */
+        .rest-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .rest-images__item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .rest-images__item img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .rest-images__item:hover img {
+            transform: scale(1.04);
+        }
+
+        .rest-images__caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 1.2rem;
+            background: linear-gradient(transparent, rgba(10, 10, 15, 0.8));
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            color: var(--gold);
+            letter-spacing: 0.04em;
+        }
+
+        /* Text block */
+        .rest-text {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .rest-text p {
+            font-size: 1.02rem;
+            line-height: 1.85;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .rest-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* CTA blocks */
+        .rest-cta {
+            background: var(--bg-dark);
+        }
+
+        .rest-cta__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .rest-cta__card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .rest-cta__card:hover {
+            border-color: var(--border-light);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .rest-cta__card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .rest-cta__card p {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .rest-cta__card .btn {
+            display: inline-block;
+        }
+
+        .btn--whatsapp {
+            border-color: #25D366;
+            color: #25D366;
+        }
+
+        .btn--whatsapp::before {
+            background: #25D366;
+        }
+
+        .btn--whatsapp:hover {
+            color: var(--bg-deep);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .restore-types__grid,
+            .rest-process__steps {
+                grid-template-columns: 1fr;
+            }
+
+            .rest-images {
+                grid-template-columns: 1fr;
+            }
+
+            .rest-images__item img {
+                height: 240px;
+            }
+
+            .rest-cta__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .restore-types__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .rest-process__steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav" id="nav">
+    <a href="https://dudkin.co/" class="nav__logo">Дудкинъ</a>
+    <ul class="nav__links">
+        <li><a href="https://dudkin.co/#portfolio">Портфолио</a></li>
+        <li><a href="https://dudkin.co/#services">Услуги</a></li>
+        <li><a href="https://dudkin.co/#about">О мастере</a></li>
+        <li><a href="https://dudkin.co/#contact">Контакт</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Меню">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="https://dudkin.co/#portfolio">Портфолио</a>
+    <a href="https://dudkin.co/#services">Услуги</a>
+    <a href="https://dudkin.co/#about">О мастере</a>
+    <a href="https://dudkin.co/#contact">Контакт</a>
+</div>
+
+<!-- Hero -->
+<section class="rest-hero">
+    <div class="rest-hero__content">
+        <div class="ornament-divider" style="margin-bottom: 2rem;">
+            <span class="ornament-divider__line"></span>
+            <span class="ornament-divider__diamond"></span>
+            <span class="ornament-divider__line"></span>
+        </div>
+        <h1 class="rest-hero__title">Реставрация витражей</h1>
+        <p class="rest-hero__lead">Возвращаем жизнь старинным витражам. Каждое стекло хранит историю — наша задача сберечь её, восстановив утраченную красоту бережно и точно.</p>
+    </div>
+</section>
+
+<!-- What we restore -->
+<section class="restore-types">
+    <div class="section">
+        <h2 class="section__title">Что мы реставрируем</h2>
+        <p class="section__subtitle">Работаем с витражами любого возраста и состояния. От фрагментов до полного восстановления.</p>
+
+        <div class="restore-types__grid">
+            <div class="restore-types__card">
+                <span class="restore-types__icon">&#9670;</span>
+                <h3>Витражи Тиффани</h3>
+                <p>Восстановление паяных соединений, замена повреждённых стёкол с подбором по цвету и фактуре. Работа с оригинальной медной фольгой и свинцовым припоем.</p>
+            </div>
+            <div class="restore-types__card">
+                <span class="restore-types__icon">&#10016;</span>
+                <h3>Церковные окна</h3>
+                <p>Реставрация храмовых витражей с сохранением канонической иконографии. Укрепление свинцовой протяжки, восстановление росписи по стеклу.</p>
+            </div>
+            <div class="restore-types__card">
+                <span class="restore-types__icon">&#9733;</span>
+                <h3>Антикварные панно</h3>
+                <p>Работа со старинными декоративными панно из цветного стекла. Консервация, восстановление недостающих фрагментов, укрепление конструкции.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Restoration text -->
+<section class="section">
+    <div class="rest-text">
+        <p>Реставрация витражей — это не просто ремонт. Это кропотливая работа на стыке ремесла и искусствоведения. Когда к нам попадает старинный витраж с трещинами, выпавшими стёклами и потемневшей пайкой, мы видим не поломку — мы видим историю, которую нужно сохранить.</p>
+
+        <p>За годы работы через мастерскую прошли витражи начала XX века из московских особняков, церковные окна, пострадавшие от времени и небрежного хранения, фамильные панно, которые передавались из поколения в поколение. Каждый случай уникален: где-то достаточно аккуратно перепаять швы и заменить пару фрагментов, а где-то приходится полностью разбирать конструкцию и собирать заново.</p>
+
+        <p>Мы принципиально работаем только с материалами, соответствующими эпохе витража. Если оригинал собран на свинцовом профиле — используем свинец. Если применялась техника Тиффани с медной фольгой — берём фольгу. Стёкла для замены подбираем по цвету, прозрачности и текстуре, чтобы восстановленный фрагмент не отличался от соседних.</p>
+
+        <p>Особое внимание уделяем документированию. Перед началом работ фиксируем состояние каждого элемента: фотографируем, составляем схему повреждений, описываем материалы. Это важно и для заказчика, и для истории самого витража.</p>
+    </div>
+</section>
+
+<!-- Process -->
+<section class="section" style="padding-top: 0;">
+    <h2 class="section__title">Этапы реставрации</h2>
+    <p class="section__subtitle">От первого осмотра до установки на место — каждый шаг выверен и задокументирован.</p>
+
+    <div class="rest-process__steps">
+        <div class="rest-process__step">
+            <div class="rest-process__num">01</div>
+            <h3>Осмотр и оценка</h3>
+            <p>Выезжаем на объект или принимаем витраж в мастерской. Определяем степень повреждений, материалы, технику изготовления.</p>
+        </div>
+        <div class="rest-process__step">
+            <div class="rest-process__num">02</div>
+            <h3>Документирование</h3>
+            <p>Фотофиксация, составление карты повреждений, описание каждого фрагмента. Согласование объёма работ и сроков.</p>
+        </div>
+        <div class="rest-process__step">
+            <div class="rest-process__num">03</div>
+            <h3>Бережная разборка</h3>
+            <p>Аккуратный демонтаж витража с маркировкой каждого элемента. Сохраняем все оригинальные стёкла, которые можно использовать повторно.</p>
+        </div>
+        <div class="rest-process__step">
+            <div class="rest-process__num">04</div>
+            <h3>Очистка и промывка</h3>
+            <p>Удаление загрязнений, окислов, старой замазки. Стёкла очищаем вручную, без агрессивной химии, чтобы не повредить роспись и патину.</p>
+        </div>
+        <div class="rest-process__step">
+            <div class="rest-process__num">05</div>
+            <h3>Замена фрагментов</h3>
+            <p>Подбираем стёкла для замены разбитых элементов. Вырезаем по оригинальным шаблонам, добиваясь точного совпадения по цвету и текстуре.</p>
+        </div>
+        <div class="rest-process__step">
+            <div class="rest-process__num">06</div>
+            <h3>Сборка и установка</h3>
+            <p>Собираем витраж на оригинальном или восстановленном профиле. Пайка, замазка, патинирование. Устанавливаем на место с укреплением.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Images -->
+<section class="section" style="padding-top: 0;">
+    <div class="rest-images">
+        <div class="rest-images__item">
+            <img src="../img/roses-detail.jpg" alt="Фрагмент витража с розами — детальная проработка стекла" loading="lazy" width="600" height="320">
+            <div class="rest-images__caption">Детали витражного панно</div>
+        </div>
+        <div class="rest-images__item">
+            <img src="../img/kingfisher-process.jpg" alt="Процесс создания витража — рабочий момент в мастерской" loading="lazy" width="600" height="320">
+            <div class="rest-images__caption">Работа в мастерской</div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA blocks -->
+<section class="rest-cta">
+    <div class="section">
+        <h2 class="section__title">Обсудить реставрацию</h2>
+        <p class="section__subtitle">Пришлите фотографии витража — оценим состояние и расскажем, что можно сделать.</p>
+
+        <div class="rest-cta__grid">
+            <div class="rest-cta__card">
+                <h3>Оставить заявку</h3>
+                <p>Опишите задачу через форму на сайте — ответим в течение дня. Расскажем о сроках, стоимости и порядке работ.</p>
+                <a href="https://dudkin.co/#contact" class="btn">Обсудить реставрацию</a>
+            </div>
+            <div class="rest-cta__card">
+                <h3>Написать в WhatsApp</h3>
+                <p>Удобнее в мессенджере? Отправьте фото витража — дадим предварительную оценку прямо в переписке.</p>
+                <a href="https://wa.me/79772921707" class="btn btn--whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer__inner">
+        <a href="https://dudkin.co/" class="footer__brand">Витражное дело Дудкинъ</a>
+        <p class="footer__copy">&copy; 2025 dudkin.co</p>
+    </div>
+</footer>
+
+<!-- WhatsApp float -->
+<a href="https://wa.me/79772921707" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.122 1.525 5.857L.05 23.5l5.765-1.512A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.875 0-3.63-.51-5.137-1.4l-.363-.218-3.825 1.003 1.02-3.738-.237-.375A9.698 9.698 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+</a>
+
+<script>
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive: true});
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+});
+mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    });
+});
+
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold: 0.15});
+document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

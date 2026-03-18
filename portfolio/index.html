@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфолио витражей мастерской Дудкинъ — фото работ в технике Тиффани, мозаичных панно, витражных зеркал и окон. Витражи в интерьере частных домов и квартир.">
+    <meta name="keywords" content="витражи фото, витражи в интерьере, портфолио витражей, витражи Тиффани фото, витражные окна фото, мозаичные панно, витражные зеркала, Дудкин">
+    <meta property="og:title" content="Портфолио витражей — фото работ мастерской Дудкинъ">
+    <meta property="og:description" content="Галерея авторских витражей: Тиффани, мозаика, арочные окна, зеркала. Фото выполненных работ для частных интерьеров.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:url" content="https://dudkin.co/portfolio/">
+    <meta property="og:image" content="https://dudkin.co/img/roses-art-nouveau.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Витражное дело Дудкинъ">
+    <link rel="canonical" href="https://dudkin.co/portfolio/">
+    <title>Портфолио витражей — фото работ мастерской Дудкинъ</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* ====== PORTFOLIO PAGE SPECIFIC ====== */
+        .p-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: var(--nav-height);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 clamp(1.5rem, 4vw, 3rem);
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 1px 0 var(--border);
+        }
+
+        .p-nav__logo {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.05em;
+        }
+
+        .p-nav__back {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .p-nav__back:hover {
+            color: var(--gold);
+        }
+
+        /* Hero — compact for gallery page */
+        .p-hero {
+            padding: calc(var(--nav-height) + 4rem) clamp(1.5rem, 4vw, 3rem) 3rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .p-hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 500;
+            color: var(--gold);
+            letter-spacing: 0.06em;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .p-hero__intro {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .p-hero__intro p {
+            margin-bottom: 1rem;
+        }
+
+        .p-hero__intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Ornament */
+        .p-ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .p-ornament__line {
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .p-ornament__diamond {
+            width: 8px;
+            height: 8px;
+            border: 1px solid var(--gold);
+            transform: rotate(45deg);
+        }
+
+        /* Gallery grid */
+        .p-gallery {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 clamp(1.5rem, 4vw, 3rem) 4rem;
+        }
+
+        .p-gallery__grid {
+            columns: 3;
+            column-gap: 1.5rem;
+        }
+
+        .p-gallery__item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 2px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+        }
+
+        .p-gallery__item:hover {
+            border-color: var(--gold-dim);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(201, 168, 76, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .p-gallery__item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .p-gallery__item:hover img {
+            transform: scale(1.03);
+        }
+
+        .p-gallery__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(10, 10, 15, 0.85) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.2rem;
+        }
+
+        .p-gallery__item:hover .p-gallery__overlay {
+            opacity: 1;
+        }
+
+        .p-gallery__title {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--gold);
+            letter-spacing: 0.03em;
+        }
+
+        /* CTA blocks */
+        .p-cta {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem clamp(1.5rem, 4vw, 3rem);
+            text-align: center;
+        }
+
+        .p-cta__heading {
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 500;
+            color: var(--gold);
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .p-cta__text {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .p-cta__buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .p-cta__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            padding: 0.85rem 2.2rem;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            background: transparent;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .p-cta__btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease;
+            z-index: -1;
+        }
+
+        .p-cta__btn:hover {
+            color: var(--bg-deep);
+        }
+
+        .p-cta__btn:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .p-cta__btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            transition: fill 0.4s ease;
+        }
+
+        .p-cta__btn--wa {
+            border-color: #25D366;
+            color: #25D366;
+        }
+
+        .p-cta__btn--wa::before {
+            background: #25D366;
+        }
+
+        .p-cta__btn--wa:hover {
+            color: #fff;
+        }
+
+        /* Footer */
+        .p-footer {
+            border-top: 1px solid var(--border);
+            padding: 2.5rem clamp(1.5rem, 4vw, 3rem);
+            text-align: center;
+        }
+
+        .p-footer__brand {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            color: var(--gold);
+            letter-spacing: 0.06em;
+            margin-bottom: 0.5rem;
+        }
+
+        .p-footer__copy {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+        }
+
+        /* Lightbox */
+        .p-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .p-lightbox.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .p-lightbox__overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 10, 15, 0.94);
+        }
+
+        .p-lightbox__img {
+            position: relative;
+            z-index: 1;
+            max-width: 90vw;
+            max-height: 85vh;
+            object-fit: contain;
+        }
+
+        .p-lightbox__title {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--gold);
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .p-lightbox__close {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            z-index: 2;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 2.5rem;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.3s ease;
+        }
+
+        .p-lightbox__close:hover {
+            color: var(--gold);
+        }
+
+        .p-lightbox__nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--gold);
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background 0.3s ease, border-color 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .p-lightbox__nav:hover {
+            background: var(--gold-glow);
+            border-color: var(--gold);
+        }
+
+        .p-lightbox__prev { left: 1.5rem; }
+        .p-lightbox__next { right: 1.5rem; }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .p-gallery__grid {
+                columns: 2;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .p-gallery__grid {
+                columns: 1;
+            }
+
+            .p-gallery__overlay {
+                opacity: 1;
+            }
+
+            .p-cta__buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .p-lightbox__nav {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+
+            .p-lightbox__prev { left: 0.5rem; }
+            .p-lightbox__next { right: 0.5rem; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Портфолио витражей мастерской Дудкинъ",
+        "description": "Фото авторских витражей в интерьере: техника Тиффани, мозаичные панно, витражные зеркала и окна. Работы мастерской Дудкинъ.",
+        "url": "https://dudkin.co/portfolio/",
+        "mainEntity": {
+            "@type": "ItemList",
+            "numberOfItems": 13,
+            "itemListElement": [
+                {
+                    "@type": "ImageObject",
+                    "position": 1,
+                    "name": "Розы в стиле Арт-Нуво — витраж Тиффани",
+                    "contentUrl": "https://dudkin.co/img/roses-art-nouveau.jpg",
+                    "description": "Витраж с розами в технике Тиффани, стиль Арт-Нуво. Авторская работа мастерской Дудкинъ."
+                },
+                {
+                    "@type": "ImageObject",
+                    "position": 2,
+                    "name": "Зимородок на магнолиях — витражное панно",
+                    "contentUrl": "https://dudkin.co/img/kingfisher.jpg",
+                    "description": "Витражное панно с зимородком на ветке магнолии. Техника Тиффани."
+                },
+                {
+                    "@type": "ImageObject",
+                    "position": 3,
+                    "name": "Тюльпаны — витраж в интерьере",
+                    "contentUrl": "https://dudkin.co/img/tulips.jpg",
+                    "description": "Витраж с тюльпанами для оконного проёма. Яркие цвета, классическая техника."
+                },
+                {
+                    "@type": "ImageObject",
+                    "position": 4,
+                    "name": "Попугай — декоративный витраж",
+                    "contentUrl": "https://dudkin.co/img/parrot.jpg",
+                    "description": "Витраж с попугаем в насыщенных тонах. Авторский дизайн."
+                },
+                {
+                    "@type": "ImageObject",
+                    "position": 5,
+                    "name": "Витражное зеркало",
+                    "contentUrl": "https://dudkin.co/img/mirror.jpg",
+                    "description": "Декоративное витражное зеркало с обрамлением из цветного стекла."
+                },
+                {
+                    "@type": "ImageObject",
+                    "position": 6,
+                    "name": "Гитара — витраж в технике Тиффани",
+                    "contentUrl": "https://dudkin.co/img/guitar.jpg",
+                    "description": "Витражная композиция с гитарой. Техника Тиффани, авторская работа."
+                },
+                {
+                    "@type": "ImageObject",
+                    "position": 7,
+                    "name": "Арочное витражное окно",
+                    "contentUrl": "https://dudkin.co/img/arch-window.jpg",
+                    "description": "Витражное арочное окно для частного дома. Фото витража в интерьере."
+                },
+                {
+                    "@type": "ImageObject",
+                    "position": 8,
+                    "name": "Абстрактный фрамуг — витраж",
+                    "contentUrl": "https://dudkin.co/img/abstract-transom.jpg",
+                    "description": "Абстрактный витраж для фрамуги. Геометрический рисунок из цветного стекла."
+                },
+                {
+                    "@type": "ImageObject",
+                    "position": 9,
+                    "name": "Мозаика: Белые цветы",
+                    "contentUrl": "https://dudkin.co/img/mosaic-flowers-bw.jpg",
+                    "description": "Мозаичное панно с белыми цветами. Ручная сборка из стеклянной мозаики."
+                },
+                {
+                    "@type": "ImageObject",
+                    "position": 10,
+                    "name": "Цветочная рама — витраж",
+                    "contentUrl": "https://dudkin.co/img/flowers-frame.jpg",
+                    "description": "Витражная рама с цветочным орнаментом для зеркала или картины."
+                },
+                {
+                    "@type": "ImageObject",
+                    "position": 11,
+                    "name": "Мозаика: деталь крупным планом",
+                    "contentUrl": "https://dudkin.co/img/mosaic-detail.jpg",
+                    "description": "Фрагмент мозаичного панно крупным планом. Стеклянная мозаика ручной работы."
+                },
+                {
+                    "@type": "ImageObject",
+                    "position": 12,
+                    "name": "Мозаика: фрагмент работы",
+                    "contentUrl": "https://dudkin.co/img/mosaic-detail2.jpg",
+                    "description": "Деталь мозаичного панно. Видна текстура и игра света на стекле."
+                },
+                {
+                    "@type": "ImageObject",
+                    "position": 13,
+                    "name": "Эскиз: бычий череп",
+                    "contentUrl": "https://dudkin.co/img/skull-drawing.jpg",
+                    "description": "Авторский эскиз витража с бычьим черепом. Подготовительная работа мастера."
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="p-nav">
+    <a href="https://dudkin.co/" class="p-nav__logo">Дудкинъ</a>
+    <a href="https://dudkin.co/" class="p-nav__back">На главную</a>
+</nav>
+
+<!-- Hero -->
+<section class="p-hero">
+    <h1>Портфолио: фото витражей и мозаик</h1>
+
+    <div class="p-ornament">
+        <span class="p-ornament__line"></span>
+        <span class="p-ornament__diamond"></span>
+        <span class="p-ornament__line"></span>
+    </div>
+
+    <div class="p-hero__intro">
+        <p>В этой галерее собраны фото витражей, выполненных мастерской за последние годы. Каждая работа — от первого карандашного наброска до финальной пайки — сделана вручную. Здесь представлены витражи в технике Тиффани, мозаичные панно из стеклянной смальты, декоративные зеркала и оконные вставки.</p>
+
+        <p>Витражи в интерьере решают сразу несколько задач: рассеивают свет, создают цветовые акценты и задают настроение помещению. Панно с розами или птицами органично вписывается в классическую гостиную, абстрактный фрамуг дополняет минималистичный холл, а витражное зеркало превращает прихожую в самостоятельное арт-пространство.</p>
+
+        <p>Техника определяет характер работы. Для метода Тиффани каждый фрагмент стекла оборачивается медной фольгой и спаивается оловянным припоем — так достигается тонкость линий и детализация рисунка. Мозаика собирается из колотой смальты на подготовленное основание, что позволяет покрывать криволинейные поверхности и создавать масштабные композиции. Все стёкла подбираются по цвету и фактуре из европейских и американских палитр — Spectrum, Uroboros, Wissmach.</p>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="p-gallery">
+    <div class="p-gallery__grid">
+
+        <div class="p-gallery__item" data-title="Розы в стиле Арт-Нуво">
+            <img src="../img/roses-art-nouveau.jpg" alt="Витраж Тиффани с розами в стиле Арт-Нуво — фото авторской работы" loading="lazy" width="600" height="800">
+            <div class="p-gallery__overlay">
+                <span class="p-gallery__title">Розы в стиле Арт-Нуво</span>
+            </div>
+        </div>
+
+        <div class="p-gallery__item" data-title="Зимородок на магнолиях">
+            <img src="../img/kingfisher.jpg" alt="Витражное панно с зимородком на магнолиях — витраж в интерьере" loading="lazy" width="600" height="800">
+            <div class="p-gallery__overlay">
+                <span class="p-gallery__title">Зимородок на магнолиях</span>
+            </div>
+        </div>
+
+        <div class="p-gallery__item" data-title="Тюльпаны">
+            <img src="../img/tulips.jpg" alt="Витраж с тюльпанами — фото витража для оконного проёма" loading="lazy" width="600" height="800">
+            <div class="p-gallery__overlay">
+                <span class="p-gallery__title">Тюльпаны</span>
+            </div>
+        </div>
+
+        <div class="p-gallery__item" data-title="Попугай">
+            <img src="../img/parrot.jpg" alt="Декоративный витраж с попугаем — фото витража Тиффани" loading="lazy" width="600" height="800">
+            <div class="p-gallery__overlay">
+                <span class="p-gallery__title">Попугай</span>
+            </div>
+        </div>
+
+        <div class="p-gallery__item" data-title="Витражное зеркало">
+            <img src="../img/mirror.jpg" alt="Витражное зеркало с обрамлением из цветного стекла — витражи в интерьере" loading="lazy" width="600" height="600">
+            <div class="p-gallery__overlay">
+                <span class="p-gallery__title">Витражное зеркало</span>
+            </div>
+        </div>
+
+        <div class="p-gallery__item" data-title="Гитара">
+            <img src="../img/guitar.jpg" alt="Витраж Тиффани с гитарой — фото авторского витража" loading="lazy" width="600" height="800">
+            <div class="p-gallery__overlay">
+                <span class="p-gallery__title">Гитара</span>
+            </div>
+        </div>
+
+        <div class="p-gallery__item" data-title="Арочное окно">
+            <img src="../img/arch-window.jpg" alt="Витражное арочное окно в частном доме — витражи фото" loading="lazy" width="600" height="900">
+            <div class="p-gallery__overlay">
+                <span class="p-gallery__title">Арочное окно</span>
+            </div>
+        </div>
+
+        <div class="p-gallery__item" data-title="Абстрактный фрамуг">
+            <img src="../img/abstract-transom.jpg" alt="Абстрактный витраж для фрамуги — геометрический витраж фото" loading="lazy" width="600" height="400">
+            <div class="p-gallery__overlay">
+                <span class="p-gallery__title">Абстрактный фрамуг</span>
+            </div>
+        </div>
+
+        <div class="p-gallery__item" data-title="Мозаика: Белые цветы">
+            <img src="../img/mosaic-flowers-bw.jpg" alt="Мозаичное панно с белыми цветами — мозаика из стеклянной смальты" loading="lazy" width="600" height="600">
+            <div class="p-gallery__overlay">
+                <span class="p-gallery__title">Мозаика: Белые цветы</span>
+            </div>
+        </div>
+
+        <div class="p-gallery__item" data-title="Цветочная рама">
+            <img src="../img/flowers-frame.jpg" alt="Витражная рама с цветочным орнаментом — витражи в интерьере фото" loading="lazy" width="600" height="800">
+            <div class="p-gallery__overlay">
+                <span class="p-gallery__title">Цветочная рама</span>
+            </div>
+        </div>
+
+        <div class="p-gallery__item" data-title="Мозаика: деталь">
+            <img src="../img/mosaic-detail.jpg" alt="Деталь мозаичного панно — стеклянная мозаика ручной работы крупным планом" loading="lazy" width="600" height="600">
+            <div class="p-gallery__overlay">
+                <span class="p-gallery__title">Мозаика: деталь</span>
+            </div>
+        </div>
+
+        <div class="p-gallery__item" data-title="Мозаика: деталь 2">
+            <img src="../img/mosaic-detail2.jpg" alt="Фрагмент мозаики — текстура и игра света на стеклянной смальте" loading="lazy" width="600" height="600">
+            <div class="p-gallery__overlay">
+                <span class="p-gallery__title">Мозаика: деталь 2</span>
+            </div>
+        </div>
+
+        <div class="p-gallery__item" data-title="Эскиз: бычий череп">
+            <img src="../img/skull-drawing.jpg" alt="Эскиз витража с бычьим черепом — подготовительная работа мастера" loading="lazy" width="600" height="800">
+            <div class="p-gallery__overlay">
+                <span class="p-gallery__title">Эскиз: бычий череп</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA Block 1 -->
+<section class="p-cta">
+    <div class="p-ornament">
+        <span class="p-ornament__line"></span>
+        <span class="p-ornament__diamond"></span>
+        <span class="p-ornament__line"></span>
+    </div>
+
+    <h2 class="p-cta__heading">Понравилась работа из портфолио?</h2>
+    <p class="p-cta__text">Закажите витраж по мотивам любой работы из галереи или обсудите собственный проект. Бесплатная консультация, точный расчёт стоимости за&nbsp;24&nbsp;часа.</p>
+
+    <div class="p-cta__buttons">
+        <a href="https://dudkin.co/#contact" class="p-cta__btn">Заказать похожую работу</a>
+        <a href="https://wa.me/79772921707" class="p-cta__btn p-cta__btn--wa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.52 5.856L0 24l6.335-1.652A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.875 0-3.632-.5-5.145-1.377l-.369-.219-3.826.998 1.02-3.72-.24-.382A9.69 9.69 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+            Написать в WhatsApp
+        </a>
+    </div>
+</section>
+
+<!-- CTA Block 2 — secondary -->
+<section class="p-cta" style="padding-top: 0;">
+    <h2 class="p-cta__heading">Хотите увидеть витраж в своём интерьере?</h2>
+    <p class="p-cta__text">Пришлите фото окна или проёма — подготовим эскиз и визуализацию бесплатно. Покажем, как витраж будет выглядеть именно в вашем пространстве.</p>
+
+    <div class="p-cta__buttons">
+        <a href="https://dudkin.co/#contact" class="p-cta__btn">Обсудить проект</a>
+        <a href="https://wa.me/79772921707" class="p-cta__btn p-cta__btn--wa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.52 5.856L0 24l6.335-1.652A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.875 0-3.632-.5-5.145-1.377l-.369-.219-3.826.998 1.02-3.72-.24-.382A9.69 9.69 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+            Написать в WhatsApp
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="p-footer">
+    <div class="p-footer__brand"><a href="https://dudkin.co/">dudkin.co</a></div>
+    <p class="p-footer__copy">&copy; Витражное дело Дудкинъ</p>
+</footer>
+
+<!-- Lightbox -->
+<div class="p-lightbox" id="lightbox">
+    <div class="p-lightbox__overlay" id="lightboxOverlay"></div>
+    <button class="p-lightbox__close" id="lightboxClose">&times;</button>
+    <button class="p-lightbox__nav p-lightbox__prev" id="lightboxPrev">&lsaquo;</button>
+    <button class="p-lightbox__nav p-lightbox__next" id="lightboxNext">&rsaquo;</button>
+    <img class="p-lightbox__img" id="lightboxImg" src="" alt="">
+    <div class="p-lightbox__title" id="lightboxTitle"></div>
+</div>
+
+<script>
+(function() {
+    // Lightbox
+    const items = document.querySelectorAll('.p-gallery__item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxOverlay = document.getElementById('lightboxOverlay');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+        currentIndex = index;
+        const item = items[index];
+        const img = item.querySelector('img');
+        const title = item.dataset.title;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxTitle.textContent = title;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function navigate(dir) {
+        currentIndex = (currentIndex + dir + items.length) % items.length;
+        openLightbox(currentIndex);
+    }
+
+    items.forEach(function(item, i) {
+        item.addEventListener('click', function() { openLightbox(i); });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxOverlay.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', function() { navigate(-1); });
+    lightboxNext.addEventListener('click', function() { navigate(1); });
+
+    document.addEventListener('keydown', function(e) {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') navigate(-1);
+        if (e.key === 'ArrowRight') navigate(1);
+    });
+})();
+</script>
+
+</body>
+</html>
