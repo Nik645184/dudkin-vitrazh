@@ -837,14 +837,11 @@
             const message = document.getElementById('message').value.trim();
             if (!name || !phone) { alert('Пожалуйста, заполните имя и телефон'); return false; }
 
-            // Send to Telegram
-            const tgToken = ''; // Token moved to server-side
-            const tgChat = '5083163504';
-            const tgText = '📩 Новая заявка с сайта!\n\n👤 Имя: ' + name + '\n📱 Телефон: ' + phone + (message ? '\n💬 Сообщение: ' + message : '');
-            fetch('https://api.telegram.org/bot' + tgToken + '/sendMessage', {
+            // Send to Telegram via server-side API
+            fetch('/api/contact', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({chat_id: tgChat, text: tgText, parse_mode: 'HTML'})
+                body: JSON.stringify({name, phone, message})
             }).catch(() => {});
 
             // Also open WhatsApp
