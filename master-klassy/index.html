@@ -62,27 +62,38 @@
 </script>
 
     <style>
-        /* ===== Page-specific styles ===== */
+        /* Hero with background image */
         .mk-hero {
-            position: relative;
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: calc(var(--nav-height) + 3rem) 2rem 4rem;
-            overflow: hidden;
-        }
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 2rem 4rem;
+    overflow: hidden;
+}
+.mk-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../img/step-assembly.jpg') center/cover no-repeat;
+    opacity: 0.12;
+    z-index: 0;
+}
+.mk-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,10,15,0.8) 0%, var(--bg-deep) 100%);
+    z-index: 1;
+}
+.mk-hero > * { position: relative; z-index: 2; }
 
-        .mk-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse 500px 350px at 50% 45%, rgba(201, 168, 76, 0.07) 0%, transparent 70%),
-                radial-gradient(ellipse 300px 400px at 30% 60%, rgba(27, 107, 74, 0.04) 0%, transparent 60%);
-            pointer-events: none;
-        }
+        /* ===== Page-specific styles ===== */
+        
+
+        
 
         .mk-hero__content {
             position: relative;
@@ -374,29 +385,26 @@
 </head>
 <body>
 
-<!-- Nav -->
+<!-- NAV -->
 <nav class="nav" id="nav">
     <a href="https://dudkin.co/" class="nav__logo">Дудкинъ</a>
     <ul class="nav__links">
         <li><a href="https://dudkin.co/#portfolio">Работы</a></li>
-        <li><a href="https://dudkin.co/#process">Процесс</a></li>
         <li><a href="https://dudkin.co/#services">Услуги</a></li>
-        <li><a href="/master-klassy/">Мастер-классы</a></li>
-        <li><a href="https://dudkin.co/#contact">Контакт</a></li>
+        <li><a href="https://dudkin.co/ceny/">Цены</a></li>
+        <li><a href="https://dudkin.co/#contact">Связаться</a></li>
     </ul>
     <button class="nav__hamburger" id="hamburger" aria-label="Меню">
         <span></span><span></span><span></span>
     </button>
 </nav>
-
-<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
     <a href="https://dudkin.co/#portfolio">Работы</a>
-    <a href="https://dudkin.co/#process">Процесс</a>
     <a href="https://dudkin.co/#services">Услуги</a>
-    <a href="/master-klassy/">Мастер-классы</a>
-    <a href="https://dudkin.co/#contact">Контакт</a>
+    <a href="https://dudkin.co/ceny/">Цены</a>
+    <a href="https://dudkin.co/#contact">Связаться</a>
 </div>
+
 
 <!-- Hero -->
 <section class="mk-hero">
@@ -421,7 +429,8 @@
 
         <div class="mk-cta">
             <a href="https://dudkin.co/#contact" class="btn">Записаться</a>
-            <a href="https://wa.me/79772921707" class="btn btn--whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+            
+<a href="https://wa.me/79772921707" class="btn btn--whatsapp" target="_blank" rel="noopener">WhatsApp</a>
         </div>
     </div>
 </section>
@@ -612,11 +621,27 @@
     </div>
 </section>
 
-<!-- Footer -->
+
+
+<!-- FOOTER -->
 <footer class="footer">
     <div class="footer__inner">
-        <a href="https://dudkin.co/" class="footer__brand">Дудкинъ</a>
-        <p class="footer__copy">&copy; 2025 Витражное дело Дудкинъ. Все права защищены.</p>
+        <div class="bull-skull">
+            <img src="../img/skull-gold.png" alt="Витражное дѣло Дудкинъ" width="48" height="30" style="opacity: 0.7;">
+        </div>
+        <div class="footer__brand">Витражное дѣло Дудкинъ</div>
+        <nav class="footer__nav" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin:1.5rem 0;">
+            <a href="/vitrazhnye-okna/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Витражные окна</a>
+            <a href="/vitrazhi-tiffani/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Витражи Тиффани</a>
+            <a href="/ceny/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Цены</a>
+            <a href="/portfolio/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Портфолио</a>
+            <a href="/restavraciya/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Реставрация</a>
+            <a href="/master-klassy/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Мастер-классы</a>
+            <a href="/vitrazhi-v-interere/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">В интерьере</a>
+            <a href="/vitrazhnye-panno/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Панно</a>
+            <a href="/mozaichnye-panno/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Мозаика</a>
+        </nav>
+        <div class="footer__copy">&copy; 2018&mdash;2026 Витражное дѣло Дудкинъ</div>
     </div>
 </footer>
 

@@ -70,38 +70,42 @@
     </script>
 
     <style>
+        /* Hero with background image */
+        .sp-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 2rem 4rem;
+    overflow: hidden;
+}
+.sp-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../img/arch-window.jpg') center/cover no-repeat;
+    opacity: 0.12;
+    z-index: 0;
+}
+.sp-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,10,15,0.8) 0%, var(--bg-deep) 100%);
+    z-index: 1;
+}
+.sp-hero > * { position: relative; z-index: 2; }
+
         /* ============================================
            PAGE-SPECIFIC: vitrazhnye-okna
            ============================================ */
-        .sp-hero {
-            position: relative;
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 8rem 2rem 5rem;
-            overflow: hidden;
-        }
+        
 
-        .sp-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse 600px 400px at 50% 40%, rgba(201, 168, 76, 0.06) 0%, transparent 70%),
-                radial-gradient(ellipse 300px 500px at 30% 60%, rgba(27, 107, 74, 0.04) 0%, transparent 60%),
-                radial-gradient(ellipse 250px 400px at 70% 50%, rgba(139, 34, 82, 0.03) 0%, transparent 60%);
-            pointer-events: none;
-        }
+        
 
-        .sp-hero::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, transparent 60%, var(--bg-deep) 100%);
-            pointer-events: none;
-        }
+        
 
         .sp-hero__content {
             position: relative;
@@ -424,16 +428,28 @@
 </head>
 <body>
 
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <a href="https://dudkin.co/" class="nav__logo">Дудкинъ</a>
+    <ul class="nav__links">
+        <li><a href="https://dudkin.co/#portfolio">Работы</a></li>
+        <li><a href="https://dudkin.co/#services">Услуги</a></li>
+        <li><a href="https://dudkin.co/ceny/">Цены</a></li>
+        <li><a href="https://dudkin.co/#contact">Связаться</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Меню">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="https://dudkin.co/#portfolio">Работы</a>
+    <a href="https://dudkin.co/#services">Услуги</a>
+    <a href="https://dudkin.co/ceny/">Цены</a>
+    <a href="https://dudkin.co/#contact">Связаться</a>
+</div>
+
     <!-- NAV -->
-    <nav class="nav" id="nav">
-        <a href="https://dudkin.co/" class="nav__logo">Дудкинъ</a>
-        <ul class="nav__links">
-            <li><a href="https://dudkin.co/#portfolio">Работы</a></li>
-            <li><a href="https://dudkin.co/#process">Процесс</a></li>
-            <li><a href="https://dudkin.co/#services">Услуги</a></li>
-            <li><a href="https://dudkin.co/#contact">Контакт</a></li>
-        </ul>
-    </nav>
+    
 
     <!-- HERO -->
     <section class="sp-hero">
@@ -555,9 +571,25 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="sp-footer">
-        <a href="https://dudkin.co/" class="sp-footer__brand">Дудкинъ</a>
-        <p class="sp-footer__copy">Авторские витражи ручной работы. Москва и Московская область.</p>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="bull-skull">
+                <img src="../img/skull-gold.png" alt="Витражное дѣло Дудкинъ" width="48" height="30" style="opacity: 0.7;">
+            </div>
+            <div class="footer__brand">Витражное дѣло Дудкинъ</div>
+            <nav class="footer__nav" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin:1.5rem 0;">
+                <a href="/vitrazhnye-okna/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Витражные окна</a>
+                <a href="/vitrazhi-tiffani/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Витражи Тиффани</a>
+                <a href="/ceny/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Цены</a>
+                <a href="/portfolio/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Портфолио</a>
+                <a href="/restavraciya/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Реставрация</a>
+                <a href="/master-klassy/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Мастер-классы</a>
+                <a href="/vitrazhi-v-interere/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">В интерьере</a>
+                <a href="/vitrazhnye-panno/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Панно</a>
+                <a href="/mozaichnye-panno/" style="color:var(--text-secondary);font-size:0.85rem;text-decoration:none;">Мозаика</a>
+            </nav>
+            <div class="footer__copy">&copy; 2018&mdash;2026 Витражное дѣло Дудкинъ</div>
+        </div>
     </footer>
 
     <!-- WhatsApp float -->
@@ -578,6 +610,19 @@
         });
     })();
     </script>
+
+<script>
+document.getElementById('hamburger').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.getElementById('mobileMenu').classList.toggle('active');
+});
+document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => {
+        document.getElementById('hamburger').classList.remove('active');
+        document.getElementById('mobileMenu').classList.remove('active');
+    });
+});
+</script>
 
 </body>
 </html>
