@@ -567,7 +567,9 @@
             cursor: pointer;
             border-radius: 2px;
             padding: 14px;
+            padding-bottom: 14px;
             background: var(--bg-deep);
+            aspect-ratio: 4 / 5;
         }
 
         /* Thin gold frame on dark passepartout — outside the photo */
@@ -617,11 +619,12 @@
         }
 
         .portfolio__card img {
-            width: 100%;
-            aspect-ratio: 4 / 5;
+            position: absolute;
+            inset: 14px;
+            width: calc(100% - 28px);
+            height: calc(100% - 28px);
             object-fit: cover;
             display: block;
-            position: relative;
             z-index: 1;
             transition: transform 0.6s ease;
         }
@@ -2415,8 +2418,10 @@
         });
 
         // Stagger animation for grid items
-        document.querySelectorAll('.portfolio__grid .fade-in, .services__grid .fade-in, .testimonials__grid .fade-in, .how-to-order__grid .fade-in, .process__grid .fade-in').forEach((el, i) => {
-            el.style.transitionDelay = `${i * 0.05}s`;
+        document.querySelectorAll('.portfolio__grid, .services__grid, .testimonials__grid, .how-to-order__grid, .process__grid').forEach(grid => {
+            grid.querySelectorAll('.fade-in').forEach((el, i) => {
+                el.style.transitionDelay = `${i * 0.04}s`;
+            });
         });
 
         // Form → WhatsApp redirect
