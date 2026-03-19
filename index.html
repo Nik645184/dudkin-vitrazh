@@ -20,11 +20,13 @@
     <meta name="twitter:image" content="https://dudkin.co/img/roses-art-nouveau.jpg">
     <link rel="canonical" href="https://dudkin.co/">
     <title>Витражи на заказ в Москве и МО — авторская мастерская Дудкинъ</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -194,6 +196,9 @@
             <div class="hero__slide"></div>
             <div class="hero__slide"></div>
             <div class="hero__slide"></div>
+            <div class="hero__slide"></div>
+            <div class="hero__slide"></div>
+            <div class="hero__slide"></div>
             <div class="hero__slideshow-overlay"></div>
         </div>
 
@@ -262,7 +267,7 @@
         </div>
     </section>
 
-    <!-- ====== PORTFOLIO ====== -->
+    <!-- ====== НАШИ РАБОТЫ ====== -->
     <section class="portfolio" id="portfolio">
         <div class="portfolio__inner">
             <div class="section-ornament fade-in">
@@ -273,89 +278,136 @@
                 </div>
             </div>
             <h2 class="section__title fade-in">Наши работы</h2>
-            <p class="section__subtitle fade-in">Каждый витраж — уникальное произведение, созданное вручную отъ первого штриха до послѣдняго луча свѣта</p>
+            <p class="section__subtitle fade-in">22 работы, 102 фотографии. Нажмите на изображение — откроются все ракурсы</p>
 
-            <div class="portfolio__grid">
-                <div class="portfolio__card fade-in">
+            <div class="portfolio__grid" id="portfolioGrid">
+
+                <div class="portfolio__card fade-in" data-group="rozy-art-nuvo" data-title="Розы Ар-Нуво" data-files='["97ef977b-2339-4b70-94a0-00995b147d24.jpg","9f6f43e6-c569-49b9-8f6f-a3f5d1717423.jpg","d6596f22-3d3a-45f7-81d3-0c169e5eb8d8.jpg","8473824b-580e-4309-b7eb-ffaa9d3168d9.jpg","41521fc1-003e-4a3a-a28f-b61eb6d75384.jpg","45a794fc-ee51-4fd7-87d5-30075c5276ce.jpg","89c81f7c-a4ce-479d-b0df-32038f70af11.jpg","e39cfaa1-1d46-43bc-b823-0c18ed52b9ac.jpg","f19c8d5d-8f16-4ed0-832d-91a14f0008b6.jpg"]'>
                     <div class="portfolio__card-frame"></div>
-                    <img src="img/roses-art-nouveau.jpg" alt="Витраж Тиффани — Розы в стиле Арт-Нуво" loading="lazy" width="400" height="500">
-                    <div class="portfolio__card-info">
-                        <div class="portfolio__card-title">Розы Арт-Нуво</div>
-                        <div class="portfolio__card-desc">Витраж Тиффани</div>
-                    </div>
+                    <img src="portfolio/img/rozy-art-nuvo/97ef977b-2339-4b70-94a0-00995b147d24.jpg" alt="Витраж Тиффани — розы Ар-Нуво" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Розы Ар-Нуво</div><div class="portfolio__card-desc">Витраж Тиффани · 9 фото</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="retro-avto-mozaika" data-title="Ретро-автомобиль" data-files='["845a20b3-d8e9-4f5d-bb89-0c4b734456fd.jpg","e78df640-31ef-4b01-8bcc-0d876c7c75f3.jpg","c3abd887-1551-477d-a47f-3efef1aaf155.jpg","015b3cff-c49b-40f6-8c27-1c8768b05d2b.jpg","0a4eccd6-1f9f-42ab-89be-e617fa6d8993.jpg","509e75b9-678e-4ebb-8349-76e3883248a2.jpg","6101881b-28d1-41ad-bf6b-46d5c1c45174.jpg","7ac0b3fe-04ed-4630-a21a-b52a43603ad5.jpg","7f9e0c05-da80-4a32-a5d9-adcce88a0138.jpg","9bb6b87b-ccfe-40dc-9b89-ee7a385f42a8.jpg","77da9fed-6e64-438a-b5d2-556498c6dc9a.jpg","b0b676cc-6207-48ba-b9bf-9ceeb648d3c6.jpg","ed769f63-49b9-4ff9-8f55-c8532346fe17.jpg","edaac409-eb36-4057-905e-2f43fe6e5228.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/retro-avto-mozaika/845a20b3-d8e9-4f5d-bb89-0c4b734456fd.jpg" alt="Мозаичное панно — ретро-автомобиль" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Ретро-автомобиль</div><div class="portfolio__card-desc">Мозаичное панно · 14 фото</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="lebedi-panno" data-title="Лебеди" data-files='["1bc180e1-1010-45b0-b1c1-b4c443f94515.jpg","883d2ec3-d577-456e-85ea-daaaabb42712.jpg","63c053db-bd5f-4dc2-b58c-f43728aaeaf4.jpg","a6894c8f-9a23-4cb9-9830-316ee3c2c7e0.jpg","cfb6cbd7-bc6b-4cac-b4a7-0cf7e7607a57.jpg","bd29c380-f2ce-44f8-ba12-34577c2eba06.jpg","368ff270-62a0-4a49-93e6-7789c5d695b5.jpg","b9ee9ee6-3949-4877-a8b1-ec90f86e366b.jpg","24aa3ca6-0f59-4d2d-9bc2-6e1972780aa6.jpg","970c8e36-1624-42a2-8c83-43f35546a24a.jpg","e4ccec20-c257-4787-b678-f396e9f8c495.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/lebedi-panno/1bc180e1-1010-45b0-b1c1-b4c443f94515.jpg" alt="Витражное панно — лебеди" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Лебеди</div><div class="portfolio__card-desc">Витражное панно · 11 фото</div></div>
                 </div>
                 <div class="portfolio__card fade-in">
                     <div class="portfolio__card-frame"></div>
-                    <img src="img/mosaic-flowers-bw.jpg" alt="Мозаичное панно — Белые цветы" loading="lazy" width="400" height="500">
-                    <div class="portfolio__card-info">
-                        <div class="portfolio__card-title">Белые цветы</div>
-                        <div class="portfolio__card-desc">Мозаичное панно</div>
-                    </div>
+                    <img src="img/kingfisher.jpg" alt="Витражное панно — зимородок на магнолиях" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Зимородокъ</div><div class="portfolio__card-desc">Витражное панно</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="zerkalo-kuvshinki" data-title="Зеркало: кувшинки" data-files='["5e3260e3-7e8a-4f2b-a599-f7481f813d16.jpg","28b5b5c0-87f3-49b7-b8d1-4a7092e19e3c.jpg","54538e7a-4ff1-454a-b0d1-d0d65c3186fb.jpg","7b3a8e3e-720a-4b1d-8516-0d55eb94e093.jpg","e612c4a1-8bbe-4c6e-90ce-d18ad9fddee6.jpg","ec436556-7a0a-4fc8-b723-ac57dba13800.jpg","ee813d11-e02d-4bde-9f59-1f73bed91262.jpg","e48be319-e329-40c2-a68d-bb56e0290be6.jpg","266308eb-78eb-41d1-966b-c7f293b5317e.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/zerkalo-kuvshinki/5e3260e3-7e8a-4f2b-a599-f7481f813d16.jpg" alt="Витражное зеркало — кувшинки" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Зеркало: кувшинки</div><div class="portfolio__card-desc">Витражное зеркало · 9 фото</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="magnoliya-arka-okno" data-title="Арочное окно: магнолии" data-files='["08deb927-75d0-4562-9a6e-6384637f0527.jpg","27c52af5-aa58-4c12-a768-c3517854b3f0.jpg","5d6b909b-2f21-4ce8-a88b-7fd8f5d18a5d.jpg","13e4753b-9741-4054-abf6-7882d9ed75a2.jpg","6ed63743-eeb8-41d4-9d7b-d173d2e5f783.jpg","a409372e-587e-45aa-8c3e-7364cd3722f8.jpg","489e7ded-3bbc-4cfa-bc44-749badc50f05.jpg","550aaac6-9c7a-4a43-b1e3-6767ba3a405a.jpg","4d0e820f-7f0c-4cd3-8c6c-9328f16d22f7.jpg","6f1bebcb-3959-4233-bbe9-3ed29c4cfd97.jpg","e61caceb-5bff-426d-8b73-27258e882877.jpg","d2a3ce2f-c14e-493e-affb-49771ec027a5.jpg","d46361c1-6954-4449-8566-43ad7f9c2e72.jpg","ca5c0564-ea8f-41cd-9a9a-73f20183a063.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/magnoliya-arka-okno/08deb927-75d0-4562-9a6e-6384637f0527.jpg" alt="Арочное окно — магнолии" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Арочное окно: магнолии</div><div class="portfolio__card-desc">Витражное окно · 14 фото</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="belye-tsvety-mozaika" data-title="Белые цветы" data-files='["939c3dd6-b47e-40f1-b01d-bb3c64d4823d.jpg","0a8ecce8-1632-4cbd-9f18-a90a40b1115e.jpg","29dd051c-5faf-4366-af61-2694b71fd8a3.jpg","3576bdea-1bb7-4d23-93fb-0a0c47374bde.jpg","c7768856-b21b-41e3-991a-596cf7ff0cca.jpg","c995ccd3-6b20-4a04-8d43-0e2634c0045b.jpg","d755ad22-1c4f-4708-80bc-475ae761f161.jpg","32ddf628-8bcb-421c-aba7-3ac24cf7de0f.jpg","8dbd0bd9-4986-4eba-8ca4-f164e592a1cd.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/belye-tsvety-mozaika/939c3dd6-b47e-40f1-b01d-bb3c64d4823d.jpg" alt="Мозаичное панно — белые цветы" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Белые цветы</div><div class="portfolio__card-desc">Мозаичное панно · 9 фото</div></div>
                 </div>
                 <div class="portfolio__card fade-in">
                     <div class="portfolio__card-frame"></div>
-                    <img src="img/kingfisher.jpg" alt="Витражное панно — Зимородок" loading="lazy" width="400" height="500">
-                    <div class="portfolio__card-info">
-                        <div class="portfolio__card-title">Зимородокъ</div>
-                        <div class="portfolio__card-desc">Витражное панно</div>
-                    </div>
+                    <img src="img/tulips.jpg" alt="Витраж с тюльпанами" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Тюльпаны</div><div class="portfolio__card-desc">Витраж с подсветкой</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="magnoliya-derevo-panno" data-title="Дерево магнолии" data-files='["32cd6b63-3a98-4725-93e2-de353421b097.jpg","4b3277c6-4df7-481b-b499-724262d72b29.jpg","fcaff568-c4f2-4318-9626-8b6b21dcb8fc.jpg","6dd1c6ac-49fb-4549-b7e6-88ae66a63169.jpg","f52a0b8a-7b26-4d66-b4f7-8d60903abecd.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/magnoliya-derevo-panno/32cd6b63-3a98-4725-93e2-de353421b097.jpg" alt="Витражное панно — магнолия" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Дерево магнолии</div><div class="portfolio__card-desc">Витражное панно · 5 фото</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="portret-dali" data-title="Портрет Дали" data-files='["5b6ac6bd-a47e-480d-b961-5610995e7a65.jpg","2238f1c3-642d-4c03-92aa-e64cc7a7ea47.jpg","5471e385-3531-4229-89f0-8c4c2ab93b74.jpg","a3750006-421d-42de-87e8-ee5071ed618e.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/portret-dali/5b6ac6bd-a47e-480d-b961-5610995e7a65.jpg" alt="Витражный портрет Дали" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Портрет Дали</div><div class="portfolio__card-desc">Витраж Тиффани · 4 фото</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="zerkalo-vyunok" data-title="Зеркало: вьюнок" data-files='["d1e9494d-234a-424b-8076-888e4cdf4d53.jpg","0320b058-f90a-4444-b116-56a7fdaf5d8c.jpg","092b1c6a-2169-4cfe-b485-57977a1aa18b.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/zerkalo-vyunok/d1e9494d-234a-424b-8076-888e4cdf4d53.jpg" alt="Витражное зеркало — вьюнок" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Зеркало: вьюнок</div><div class="portfolio__card-desc">Витражное зеркало · 3 фото</div></div>
                 </div>
                 <div class="portfolio__card fade-in">
                     <div class="portfolio__card-frame"></div>
-                    <img src="img/tulips.jpg" alt="Витраж с подсветкой — Тюльпаны" loading="lazy" width="400" height="500">
-                    <div class="portfolio__card-info">
-                        <div class="portfolio__card-title">Тюльпаны</div>
-                        <div class="portfolio__card-desc">Витраж с подсветкой</div>
-                    </div>
+                    <img src="img/guitar.jpg" alt="Мозаика из стекла — гитара" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Гитара</div><div class="portfolio__card-desc">Мозаика из стекла</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="mamont-ohota" data-title="Охота на мамонта" data-files='["a675a247-2597-4553-b1b8-0a21f897f259.jpg","3d98bf59-4e5e-4fb1-8833-6aa665eb6dac.jpg","1305ff86-8e32-4629-a935-d2d1b73154ef.jpg","ad3e08e5-1e59-40fb-b032-747a16373762.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/mamont-ohota/a675a247-2597-4553-b1b8-0a21f897f259.jpg" alt="Мозаичное панно — охота на мамонта" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Охота на мамонта</div><div class="portfolio__card-desc">Мозаичное панно · 4 фото</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="sakura-panno" data-title="Сакура" data-files='["10b7f25f-35eb-4a7f-b9cc-050df6aa7ac7.jpg","14d658a1-49eb-4b83-a981-6e1cf40855bb.jpg","4ce4455d-c5ca-4d36-8232-944a325464ec.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/sakura-panno/10b7f25f-35eb-4a7f-b9cc-050df6aa7ac7.jpg" alt="Витражное панно — сакура" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Сакура</div><div class="portfolio__card-desc">Витражное панно · 3 фото</div></div>
                 </div>
                 <div class="portfolio__card fade-in">
                     <div class="portfolio__card-frame"></div>
-                    <img src="img/parrot.jpg" alt="Мозаика в раме — Попугай в саду" loading="lazy" width="400" height="500">
-                    <div class="portfolio__card-info">
-                        <div class="portfolio__card-title">Попугай въ саду</div>
-                        <div class="portfolio__card-desc">Мозаика в раме</div>
-                    </div>
+                    <img src="img/abstract-transom.jpg" alt="Абстрактный витраж — фрамуга" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Абстракция</div><div class="portfolio__card-desc">Фрамуга</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="granat-i-ptitsa" data-title="Гранат и зимородок" data-files='["e4017edb-7471-44a2-b23b-e4915f505ae7.jpg","a253f885-4e83-4cc7-89e6-af1f21ab9336.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/granat-i-ptitsa/e4017edb-7471-44a2-b23b-e4915f505ae7.jpg" alt="Витражное панно — гранат и зимородок" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Гранат и зимородок</div><div class="portfolio__card-desc">Витражное панно · 2 фото</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="abstraktsiya-klee" data-title="Абстракция: Клее" data-files='["6c10f753-9e6e-4b01-b77f-fc855ffbfaf0.jpg","8f59812b-3e4a-432e-b035-3cb1c358a478.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/abstraktsiya-klee/6c10f753-9e6e-4b01-b77f-fc855ffbfaf0.jpg" alt="Абстрактная мозаика — Клее" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Абстракция: Клее</div><div class="portfolio__card-desc">Мозаика · 2 фото</div></div>
                 </div>
                 <div class="portfolio__card fade-in">
                     <div class="portfolio__card-frame"></div>
-                    <img src="img/mirror.jpg" alt="Витражное зеркало — Цветочное зеркало" loading="lazy" width="400" height="500">
-                    <div class="portfolio__card-info">
-                        <div class="portfolio__card-title">Цвѣточное зеркало</div>
-                        <div class="portfolio__card-desc">Витражное зеркало</div>
-                    </div>
+                    <img src="img/flowers-frame.jpg" alt="Витраж в деревянной раме — полевые цветы" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Полевые цвѣты</div><div class="portfolio__card-desc">Витраж в деревянной раме</div></div>
                 </div>
-                <div class="portfolio__card fade-in">
+                <div class="portfolio__card fade-in" data-group="portret-klassik" data-title="Портрет классика" data-files='["478c1f25-e203-4dcc-9389-bf69f8a4e7a4.jpg"]'>
                     <div class="portfolio__card-frame"></div>
-                    <img src="img/guitar.jpg" alt="Мозаика из стекла — Гитара" loading="lazy" width="400" height="500">
-                    <div class="portfolio__card-info">
-                        <div class="portfolio__card-title">Гитара</div>
-                        <div class="portfolio__card-desc">Мозаика из стекла</div>
-                    </div>
+                    <img src="portfolio/img/portret-klassik/478c1f25-e203-4dcc-9389-bf69f8a4e7a4.jpg" alt="Витражный портрет — монохром" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Портрет классика</div><div class="portfolio__card-desc">Витраж Тиффани</div></div>
                 </div>
-                <div class="portfolio__card fade-in">
+                <div class="portfolio__card fade-in" data-group="toskana-peyzazh" data-title="Тоскана" data-files='["6eabd507-1bbf-42eb-8972-b2686bcb63b2.jpg"]'>
                     <div class="portfolio__card-frame"></div>
-                    <img src="img/arch-window.jpg" alt="Архитектурный витраж — Арочное окно" loading="lazy" width="400" height="500">
-                    <div class="portfolio__card-info">
-                        <div class="portfolio__card-title">Арочное окно</div>
-                        <div class="portfolio__card-desc">Архитектурный витраж</div>
-                    </div>
+                    <img src="portfolio/img/toskana-peyzazh/6eabd507-1bbf-42eb-8972-b2686bcb63b2.jpg" alt="Мозаичное панно — Тоскана" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Тоскана</div><div class="portfolio__card-desc">Мозаичное панно</div></div>
                 </div>
-                <div class="portfolio__card fade-in">
+                <div class="portfolio__card fade-in" data-group="tyulpany-irisy" data-title="Тюльпаны и ирисы" data-files='["659142cf-ba21-4400-8f3f-72e8bc2d3da5.jpg"]'>
                     <div class="portfolio__card-frame"></div>
-                    <img src="img/abstract-transom.jpg" alt="Фрамуга — Абстракция" loading="lazy" width="400" height="500">
-                    <div class="portfolio__card-info">
-                        <div class="portfolio__card-title">Абстракция</div>
-                        <div class="portfolio__card-desc">Фрамуга</div>
-                    </div>
+                    <img src="portfolio/img/tyulpany-irisy/659142cf-ba21-4400-8f3f-72e8bc2d3da5.jpg" alt="Витражное панно — тюльпаны и ирисы" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Тюльпаны и ирисы</div><div class="portfolio__card-desc">Витражное панно</div></div>
                 </div>
-                <div class="portfolio__card fade-in">
+                <div class="portfolio__card fade-in" data-group="popugay-ara" data-title="Попугай ара" data-files='["21cc818f-86ed-416c-929f-cb859dda0221.jpg"]'>
                     <div class="portfolio__card-frame"></div>
-                    <img src="img/flowers-frame.jpg" alt="Витраж в деревянной раме — Полевые цветы" loading="lazy" width="400" height="500">
-                    <div class="portfolio__card-info">
-                        <div class="portfolio__card-title">Полевые цвѣты</div>
-                        <div class="portfolio__card-desc">Витраж в деревянной раме</div>
-                    </div>
+                    <img src="portfolio/img/popugay-ara/21cc818f-86ed-416c-929f-cb859dda0221.jpg" alt="Мозаичное панно — попугай ара" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Попугай ара</div><div class="portfolio__card-desc">Мозаичное панно</div></div>
                 </div>
+                <div class="portfolio__card fade-in" data-group="petuh-chernyy" data-title="Чёрный петух" data-files='["aa545105-f70f-4149-91be-ddb84e03a2f4.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/petuh-chernyy/aa545105-f70f-4149-91be-ddb84e03a2f4.jpg" alt="Мозаичное панно — чёрный петух" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Чёрный петух</div><div class="portfolio__card-desc">Мозаичное панно</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="persiki-mozaika" data-title="Персики" data-files='["f86043df-0d69-44a1-9886-3f2ec8b7e6f1.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/persiki-mozaika/f86043df-0d69-44a1-9886-3f2ec8b7e6f1.jpg" alt="Мозаика — персики" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Персики</div><div class="portfolio__card-desc">Мозаика</div></div>
+                </div>
+                <div class="portfolio__card fade-in" data-group="okno-arka-kirpich" data-title="Арочное окно" data-files='["51abfdc9-64ac-4bbd-8e24-516e7ea64416.jpg"]'>
+                    <div class="portfolio__card-frame"></div>
+                    <img src="portfolio/img/okno-arka-kirpich/51abfdc9-64ac-4bbd-8e24-516e7ea64416.jpg" alt="Арочное витражное окно" loading="lazy" width="400" height="500">
+                    <div class="portfolio__card-info"><div class="portfolio__card-title">Арочное окно</div><div class="portfolio__card-desc">Витраж в интерьере</div></div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -480,10 +532,22 @@
                 <p class="about__text">
                     Витражное дѣло Дудкинъ — это авторская мастерская полного цикла: от первого эскиза карандашом до последнего штриха патины. Каждый витраж создаётся вручную в технике Тиффани с использованием лучшего американского и европейского стекла.
                 </p>
+            </div>
+
+            <div class="about__workshop fade-in">
+                <p class="about__text" style="text-align:center; margin-bottom: 1.5rem;">
+                    В мастерской — стеллажи с листовым стеклом из Америки и Европы: Spectrum, Uroboros, Wissmach, Lamberts. Больше двухсот оттенков и фактур. Каждый лист подбирается вручную на световом столе.
+                </p>
+                <div class="about__workshop-pair">
+                    <img src="portfolio/img/masterskaya-obzor/4d76b5d9-bab9-45b2-bdd8-75c63996c8c5.jpg" alt="Мастерская — рабочий стол и стеллажи с витражным стеклом" loading="lazy">
+                    <img src="portfolio/img/masterskaya-obzor/03d98be9-e00a-4afb-9457-209942893b62.jpg" alt="Мастерская — шкаф с листовым стеклом и рабочее место" loading="lazy">
+                </div>
+            </div>
+
+            <div class="about__content fade-in" style="margin-top: 2.5rem;">
                 <p class="about__text">
                     Философия мастерской проста: витраж — это не декоративное стекло, а живая картина, которая меняется с каждым лучом света.
                 </p>
-
                 <div class="about__quote">
                     <p>&laquo;Каждый витражъ — это картина, написанная свѣтомъ&raquo;</p>
                 </div>
@@ -755,17 +819,35 @@
         </div>
     </footer>
 
-    <!-- ====== FLOATING WHATSAPP ====== -->
-    <a href="https://wa.me/79772921707?text=Здравствуйте!%20Интересует%20витраж%20на%20заказ" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </a>
+    <!-- ====== FLOATING CONTACT WIDGET ====== -->
+    <div class="floating-contact" id="floating-contact">
+        <div class="float-menu">
+            <a href="https://wa.me/79772921707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B2%D0%B8%D1%82%D1%80%D0%B0%D0%B6" target="_blank" rel="noopener" class="float-option">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </a>
+            <a href="https://t.me/+79772921707" target="_blank" rel="noopener" class="float-option">
+                <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.492-1.302.48-.428-.013-1.252-.242-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                Telegram
+            </a>
+        </div>
+        <button class="float-trigger" aria-label="Написать нам" onclick="this.parentElement.classList.toggle('open')">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </button>
+    </div>
 
-    <!-- ====== LIGHTBOX ====== -->
+    <!-- ====== CAROUSEL LIGHTBOX ====== -->
     <div class="lightbox" id="lightbox">
         <div class="lightbox__overlay"></div>
         <button class="lightbox__close" aria-label="Закрыть">&times;</button>
+        <button class="lightbox__nav lightbox__prev" aria-label="Предыдущее">&lsaquo;</button>
+        <button class="lightbox__nav lightbox__next" aria-label="Следующее">&rsaquo;</button>
         <img class="lightbox__img" src="" alt="">
-        <div class="lightbox__title"></div>
+        <div class="lightbox__footer">
+            <div class="lightbox__title"></div>
+            <div class="lightbox__counter"></div>
+            <div class="lightbox__dots"></div>
+        </div>
     </div>
 
     <!-- ====== JAVASCRIPT ====== -->
@@ -861,18 +943,51 @@
             return false;
         }
 
-        // Lightbox
+        // Carousel Lightbox
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = lightbox.querySelector('.lightbox__img');
         const lightboxTitle = lightbox.querySelector('.lightbox__title');
+        const lightboxCounter = lightbox.querySelector('.lightbox__counter');
+        const lightboxDots = lightbox.querySelector('.lightbox__dots');
+        const lightboxPrev = lightbox.querySelector('.lightbox__prev');
+        const lightboxNext = lightbox.querySelector('.lightbox__next');
+        let lbFiles = [], lbGroup = '', lbIdx = 0;
 
-        document.querySelectorAll('.portfolio__card').forEach(card => {
+        function lbShow(idx) {
+            lbIdx = idx;
+            lightboxImg.style.opacity = 0;
+            setTimeout(() => {
+                lightboxImg.src = 'portfolio/img/' + lbGroup + '/' + lbFiles[idx];
+                lightboxImg.style.opacity = 1;
+            }, 120);
+            lightboxCounter.textContent = (idx + 1) + ' / ' + lbFiles.length;
+            lightboxDots.querySelectorAll('button').forEach((d, i) => d.classList.toggle('active', i === idx));
+        }
+
+        function lbNav(dir) {
+            lbShow((lbIdx + dir + lbFiles.length) % lbFiles.length);
+        }
+
+        document.querySelectorAll('.portfolio__card[data-group]').forEach(card => {
             card.addEventListener('click', () => {
-                const img = card.querySelector('img');
-                const title = card.querySelector('.portfolio__card-title');
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt;
-                lightboxTitle.textContent = title ? title.textContent : '';
+                lbGroup = card.dataset.group;
+                lbFiles = JSON.parse(card.dataset.files);
+                lightboxTitle.textContent = card.dataset.title;
+                // Build dots
+                lightboxDots.innerHTML = '';
+                if (lbFiles.length > 1) {
+                    lbFiles.forEach((_, i) => {
+                        const dot = document.createElement('button');
+                        dot.className = 'lightbox__dot';
+                        dot.addEventListener('click', () => lbShow(i));
+                        lightboxDots.appendChild(dot);
+                    });
+                }
+                // Show/hide nav
+                const multi = lbFiles.length > 1;
+                lightboxPrev.style.display = multi ? '' : 'none';
+                lightboxNext.style.display = multi ? '' : 'none';
+                lbShow(0);
                 lightbox.classList.add('active');
                 document.body.style.overflow = 'hidden';
             });
@@ -885,8 +1000,21 @@
 
         lightbox.querySelector('.lightbox__overlay').addEventListener('click', closeLightbox);
         lightbox.querySelector('.lightbox__close').addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', () => lbNav(-1));
+        lightboxNext.addEventListener('click', () => lbNav(1));
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') lbNav(-1);
+            if (e.key === 'ArrowRight') lbNav(1);
+        });
+
+        // Swipe on lightbox
+        let lbTouchX = 0;
+        lightbox.addEventListener('touchstart', e => { lbTouchX = e.changedTouches[0].screenX; });
+        lightbox.addEventListener('touchend', e => {
+            const dx = e.changedTouches[0].screenX - lbTouchX;
+            if (Math.abs(dx) > 50) lbNav(dx > 0 ? -1 : 1);
         });
 
         // Smooth scroll for anchor links (fallback for older browsers)

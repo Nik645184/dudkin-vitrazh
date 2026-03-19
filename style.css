@@ -535,6 +535,7 @@ a:hover {
     gap: 1.5rem;
 }
 
+
 .portfolio__card {
     position: relative;
     overflow: hidden;
@@ -949,6 +950,34 @@ a:hover {
     color: var(--gold);
     line-height: 1.5;
     opacity: 0.85;
+}
+
+/* Workshop photos inside About */
+.about__workshop {
+    margin-top: 2.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about__workshop-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.about__workshop-pair img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 2px;
+    border: 1px solid var(--border);
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.about__workshop-pair img:hover {
+    transform: scale(1.02);
+    border-color: var(--gold-dim);
 }
 
 /* ============================================
@@ -1416,6 +1445,15 @@ a:hover {
         opacity: 1;
     }
 
+    .lightbox__nav {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .lightbox__prev { left: 0.5rem; }
+    .lightbox__next { right: 0.5rem; }
+
     .services__grid {
         grid-template-columns: 1fr;
     }
@@ -1440,6 +1478,15 @@ a:hover {
     .about__quote {
         padding: 2rem 1rem;
     }
+
+    .about__workshop-pair {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .about__workshop-pair img {
+        height: 200px;
+    }
 }
 
 /* ============================================
@@ -1460,7 +1507,7 @@ a:hover {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    animation: heroSlide 32.5s infinite;
+    animation: heroSlide 52s infinite;
     will-change: opacity, transform;
 }
 
@@ -1469,27 +1516,39 @@ a:hover {
     animation-delay: 0s;
 }
 .hero__slide:nth-child(2) {
-    background-image: url('img/roses-art-nouveau.jpg');
+    background-image: url('portfolio/img/sakura-panno/10b7f25f-35eb-4a7f-b9cc-050df6aa7ac7.jpg');
     animation-delay: 6.5s;
 }
 .hero__slide:nth-child(3) {
-    background-image: url('img/kingfisher.jpg');
+    background-image: url('portfolio/img/petuh-chernyy/aa545105-f70f-4149-91be-ddb84e03a2f4.jpg');
     animation-delay: 13s;
 }
 .hero__slide:nth-child(4) {
-    background-image: url('img/parrot.jpg');
+    background-image: url('portfolio/img/retro-avto-mozaika/845a20b3-d8e9-4f5d-bb89-0c4b734456fd.jpg');
     animation-delay: 19.5s;
 }
 .hero__slide:nth-child(5) {
-    background-image: url('img/flowers-frame.jpg');
+    background-image: url('portfolio/img/persiki-mozaika/f86043df-0d69-44a1-9886-3f2ec8b7e6f1.jpg');
     animation-delay: 26s;
+}
+.hero__slide:nth-child(6) {
+    background-image: url('portfolio/img/popugay-ara/21cc818f-86ed-416c-929f-cb859dda0221.jpg');
+    animation-delay: 32.5s;
+}
+.hero__slide:nth-child(7) {
+    background-image: url('portfolio/img/belye-tsvety-mozaika/939c3dd6-b47e-40f1-b01d-bb3c64d4823d.jpg');
+    animation-delay: 39s;
+}
+.hero__slide:nth-child(8) {
+    background-image: url('portfolio/img/portret-dali/5b6ac6bd-a47e-480d-b961-5610995e7a65.jpg');
+    animation-delay: 45.5s;
 }
 
 @keyframes heroSlide {
     0%      { opacity: 0; transform: scale(1); }
-    4.6%    { opacity: 1; transform: scale(1); }
-    20%     { opacity: 1; transform: scale(1.1); }
-    24.6%   { opacity: 0; transform: scale(1.1); }
+    2.9%    { opacity: 1; transform: scale(1); }
+    12.5%   { opacity: 1; transform: scale(1.1); }
+    15.4%   { opacity: 0; transform: scale(1.1); }
     100%    { opacity: 0; transform: scale(1); }
 }
 
@@ -1503,45 +1562,113 @@ a:hover {
 /* ============================================
    FLOATING WHATSAPP BUTTON
    ============================================ */
-.whatsapp-float {
+/* Floating contact widget */
+.floating-contact {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 24px;
+    right: 24px;
     z-index: 999;
-    width: 52px;
-    height: 52px;
+}
+
+.float-trigger {
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
+    border: 2px solid var(--gold);
     background: var(--bg-deep);
-    border: 1px solid var(--gold-dim);
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    transition: all 0.4s ease;
-    animation: whatsappPulse 3s ease-in-out infinite;
+    box-shadow: 0 4px 24px rgba(201, 168, 76, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.whatsapp-float:hover {
-    transform: scale(1.08);
-    border-color: var(--gold);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(201, 168, 76, 0.15);
-    animation: none;
+.float-trigger::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 60%;
+    height: 200%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transform: skewX(-20deg);
+    animation: float-shimmer 3s ease-in-out infinite;
 }
 
-.whatsapp-float svg {
+@keyframes float-shimmer {
+    0%, 70%, 100% { left: -100%; }
+    30%, 40% { left: 150%; }
+}
+
+.float-trigger:hover {
+    background: var(--gold);
+    box-shadow: 0 8px 32px rgba(201, 168, 76, 0.4);
+}
+
+.float-trigger svg {
     width: 24px;
     height: 24px;
-    fill: var(--gold);
-    transition: fill 0.3s ease;
+    stroke: var(--gold);
+    fill: none;
+    stroke-width: 1.5;
+    transition: stroke 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
-.whatsapp-float:hover svg {
-    fill: var(--gold-light);
+.float-trigger:hover svg {
+    stroke: var(--bg-deep);
 }
 
-@keyframes whatsappPulse {
-    0%, 100% { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); }
-    50% { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 0 6px rgba(201, 168, 76, 0.1); }
+.float-menu {
+    position: absolute;
+    bottom: 68px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
+
+.floating-contact.open .float-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.float-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.float-option:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.float-option svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    flex-shrink: 0;
 }
 
 /* ============================================
@@ -1650,29 +1777,61 @@ a:hover {
 .lightbox__overlay {
     position: absolute;
     inset: 0;
-    background: rgba(10, 10, 15, 0.92);
+    background: rgba(10, 10, 15, 0.97);
 }
 
 .lightbox__img {
     position: relative;
     z-index: 1;
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 88vw;
+    max-height: 78vh;
     object-fit: contain;
     border-radius: 2px;
+    transition: opacity 0.25s ease;
 }
 
-.lightbox__title {
+.lightbox__footer {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    color: var(--gold);
     text-align: center;
-    white-space: nowrap;
+}
+
+.lightbox__title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+}
+
+.lightbox__counter {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.1em;
+}
+
+.lightbox__dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.lightbox__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-dim);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    padding: 0;
+}
+
+.lightbox__dot.active {
+    background: var(--gold);
 }
 
 .lightbox__close {
@@ -1692,6 +1851,33 @@ a:hover {
 .lightbox__close:hover {
     color: var(--gold);
 }
+
+.lightbox__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--gold);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s, border-color 0.3s;
+    font-size: 1.3rem;
+}
+
+.lightbox__nav:hover {
+    background: var(--gold-glow);
+    border-color: var(--gold);
+}
+
+.lightbox__prev { left: 1.5rem; }
+.lightbox__next { right: 1.5rem; }
 
 /* ============================================
    SERVICES NOTE (replacing prices)
@@ -1742,7 +1928,7 @@ a:hover {
 }
 
 @media print {
-    .nav, .mobile-menu, .hero__scroll-hint, .nav__hamburger, .whatsapp-float {
+    .nav, .mobile-menu, .hero__scroll-hint, .nav__hamburger, .floating-contact {
         display: none !important;
     }
 
